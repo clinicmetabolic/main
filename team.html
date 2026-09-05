@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Команда и эксперты | Metabolic Clinic</title>
+    <meta name="description" content="Эксперты, нутрициологи, эндокринологи и коучи платформы metadoc.live. Профессиональное сопровождение и персональная оптимизация метаболического здоровья.">
+    
+    <!-- Google Fonts: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Manrope', 'sans-serif'] },
+                    colors: {
+                        brand: { 500: '#e11d48', 600: '#be123c' }, // Rose/Crimson
+                        dark: { 800: '#1e293b', 900: '#0f172a', 950: '#020617' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .h-dvh { height: 100dvh; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Стили для интеграции виджета перевода */
+        #google_translate_element .goog-te-gadget-simple {
+            background-color: #0f172a !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            border-radius: 8px !important;
+            padding: 5px !important;
+        }
+        #google_translate_element .goog-te-gadget-simple .goog-te-menu-value span {
+            color: #94a3b8 !important;
+        }
+        #google_translate_element .goog-te-gadget-icon { display: none !important; }
+        .goog-te-banner-frame.skiptranslate, .goog-te-balloon-frame { display: none !important; }
+        body { top: 0 !important; }
+
+        .lang-select-trigger {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            padding: 8px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .lang-select-trigger:hover { background: rgba(255, 255, 255, 0.1); color: white; }
+    </style>
+
+    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Metabolic Clinic" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+</head>
+<body class="bg-dark-950 text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white relative pb-20 md:pb-0">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-40 bg-dark-950/80 backdrop-blur-md border-b border-white/5 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <i data-lucide="activity" class="w-8 h-8 text-brand-500"></i>
+                <span class="text-xl font-extrabold text-white tracking-tight">Metabolic<span class="text-brand-500">Clinic</span></span>
+            </a>
+            
+            <nav class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="index.html#specialization" class="hover:text-white transition-colors">Специализация</a>
+                <a href="about.html" class="hover:text-white transition-colors">О Центре</a>
+                <a href="team.html" class="text-brand-500 font-semibold">Специалисты</a>
+                <a href="index.html#protocol" class="hover:text-white transition-colors">Методология</a>
+                <a href="index.html#reviews" class="hover:text-white transition-colors">Отзывы</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <div id="google_translate_element" class="hidden"></div>
+                <button onclick="changeLanguage('en')" class="lang-select-trigger text-sm font-medium hidden sm:flex">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    <span>Translate</span>
+                </button>
+                <a href="index.html#products" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white font-semibold transition-all active:scale-95">
+                    Получить аудит
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Breadcrumbs & Title -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="flex items-center justify-center gap-2 text-sm font-semibold text-brand-500 mb-4 uppercase tracking-wider">
+                    <a href="index.html" class="text-slate-500 hover:text-white transition-colors">Главная</a>
+                    <span class="text-slate-600">/</span>
+                    <span>Наша команда</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
+                    Эксперты метаболической <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-rose-400">оптимизации и коучинга</span>
+                </h1>
+                <p class="text-slate-400 text-lg leading-relaxed">
+                    Командный подход — залог устойчивого результата. За каждым вашим шагом стоит междисциплинарная группа специалистов, работающих по единым протоколам.
+                </p>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Основатель и Главный коуч -->
+                <div class="bg-dark-900 border border-brand-500/30 rounded-3xl overflow-hidden hover:border-brand-500/60 transition-all duration-300 group flex flex-col shadow-lg shadow-brand-500/5">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="img/shemetov.jpeg" alt="Павел Шеметов" class="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Павел Шеметов</h3>
+                            <p class="text-brand-500 text-sm font-semibold mb-4">Основатель проекта, ведущий хелс-коуч</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Создатель экосистемы Metabolic Clinic. Помогает участникам внедрять комплексные изменения образа жизни, выстраивать индивидуальную стратегию метаболического здоровья и лично проводит консультации.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-500">
+                            <span><i data-lucide="user-check" class="w-4 h-4 inline mr-1 text-brand-500"></i> Личное ведение</span>
+                            <span><i data-lucide="check-circle-2" class="w-4 h-4 inline mr-1 text-emerald-400"></i> Стратегия &amp; Коучинг</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Эндокринолог / Научный консультант -->
+                <div class="bg-dark-900 border border-white/5 rounded-3xl overflow-hidden hover:border-brand-500/40 transition-all duration-300 group flex flex-col">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="img/romanova.jpeg" alt="Д-р Елена Романова" class="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Д-р Елена Романова</h3>
+                            <p class="text-brand-500 text-sm font-semibold mb-4">Врач-эндокринолог, куратор методологии</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Разработчик научно обоснованных информационных протоколов питания при инсулинорезистентности и нарушениях углеводного обмена. Опыт работы более 14 лет.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-500">
+                            <span><i data-lucide="award" class="w-4 h-4 inline mr-1 text-brand-500"></i> к.м.н.</span>
+                            <span><i data-lucide="check-circle-2" class="w-4 h-4 inline mr-1 text-emerald-400"></i> Аудит протоколов</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Главный Нутрициолог -->
+                <div class="bg-dark-900 border border-white/5 rounded-3xl overflow-hidden hover:border-brand-500/40 transition-all duration-300 group flex flex-col">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="img/volkova.jpeg" alt="Анна Волкова" class="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Анна Волкова</h3>
+                            <p class="text-brand-500 text-sm font-semibold mb-4">Ведущий нутрициолог-диетолог</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Специализируется на персонализации рациона, расчете гликемической нагрузки и мягком переводе на нутритивно-плотное питание без жестких ограничений.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-500">
+                            <span><i data-lucide="utensils" class="w-4 h-4 inline mr-1 text-brand-500"></i> Рационы и GI</span>
+                            <span><i data-lucide="check-circle-2" class="w-4 h-4 inline mr-1 text-emerald-400"></i> 500+ разборов</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Метаболический коуч -->
+                <div class="bg-dark-900 border border-white/5 rounded-3xl overflow-hidden hover:border-brand-500/40 transition-all duration-300 group flex flex-col">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="img/sokolova.jpeg" alt="Мария Соколова" class="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Мария Соколова</h3>
+                            <p class="text-brand-500 text-sm font-semibold mb-4">Старший хелс-коуч</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Сопровождает участников в ежедневном режиме. Помогает внедрять привычки без срывов, адаптировать меню в поездках и сохранять высокий уровень мотивации.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-500">
+                            <span><i data-lucide="message-square" class="w-4 h-4 inline mr-1 text-brand-500"></i> Чат 24/7</span>
+                            <span><i data-lucide="check-circle-2" class="w-4 h-4 inline mr-1 text-emerald-400"></i> Адаптация</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Тренер / Эксперт по активности -->
+                <div class="bg-dark-900 border border-white/5 rounded-3xl overflow-hidden hover:border-brand-500/40 transition-all duration-300 group flex flex-col">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="img/belov.jpeg" alt="Михаил Белов" class="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Михаил Белов</h3>
+                            <p class="text-brand-500 text-sm font-semibold mb-4">Эксперт по адаптивному фитнесу</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Разрабатывает программы бытовой активности (NEAT) и силовых нагрузок, ориентированных на повышение утилизации глюкозы мышцами без перегрузки суставов.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-500">
+                            <span><i data-lucide="dumbbell" class="w-4 h-4 inline mr-1 text-brand-500"></i> NEAT &amp; Силовые</span>
+                            <span><i data-lucide="check-circle-2" class="w-4 h-4 inline mr-1 text-emerald-400"></i> Без травм</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Психолог пищевого поведения -->
+                <div class="bg-dark-900 border border-white/5 rounded-3xl overflow-hidden hover:border-brand-500/40 transition-all duration-300 group flex flex-col">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="img/grigoreva.jpeg" alt="Ольга Григорьева" class="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Ольга Григорьева</h3>
+                            <p class="text-brand-500 text-sm font-semibold mb-4">Специалист по коррекции РПП</p>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Помогает выявить эмоциогенное переедание, снизить уровень кортизола через техники КПТ и наладить здоровое отношение к еде без чувства вины.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-500">
+                            <span><i data-lucide="smile" class="w-4 h-4 inline mr-1 text-brand-500"></i> КПТ-подход</span>
+                            <span><i data-lucide="check-circle-2" class="w-4 h-4 inline mr-1 text-emerald-400"></i> Работа со срывами</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Block: Principles -->
+            <div class="mt-20 bg-dark-900 border border-white/5 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="max-w-3xl relative z-10">
+                    <h2 class="text-3xl font-bold text-white mb-6">Как проходит взаимодействие с командой?</h2>
+                    <div class="space-y-4 text-slate-400">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center shrink-0 mt-1 font-bold">1</div>
+                            <p><strong class="text-white">Единый координационный центр:</strong> Вам не нужно самостоятельно собирать советы разных специалистов. Куратор объединяет экспертизу команды в понятный шаг-за-шагом план.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center shrink-0 mt-1 font-bold">2</div>
+                            <p><strong class="text-white">Безопасность и проверка:</strong> Все рекомендации базируются на протоколах, утвержденных научным консультантом платформы.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center shrink-0 mt-1 font-bold">3</div>
+                            <p><strong class="text-white">Постоянная поддержка:</strong> Ваш хелс-коуч всегда на связи, чтобы оперативно ответить на возникающие вопросы в течение дня.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="mt-16 text-center">
+                <a href="index.html#products" class="inline-flex items-center justify-center gap-3 px-8 py-5 bg-brand-600 hover:bg-brand-500 text-white text-lg font-bold rounded-2xl transition-all active:scale-95 shadow-lg shadow-brand-600/30">
+                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    Начать работу с командой экспертов
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div>
+                <span class="text-xl font-extrabold text-white tracking-tight block mb-4">Metabolic<span class="text-brand-500">Clinic</span></span>
+                <p class="text-slate-400 text-sm mb-4">Центр метаболической оптимизации. Возвращаем контроль над здоровьем через работу с данными и питанием.</p>
+                <p class="text-[10px] text-slate-500 italic">* Не является медицинской организацией.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Навигация</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="index.html#specialization" class="hover:text-brand-500 transition-colors">Специализация</a></li>
+                    <li><a href="about.html" class="hover:text-brand-500 transition-colors">О Центре</a></li>
+                    <li><a href="team.html" class="hover:text-brand-500 transition-colors">Специалисты</a></li>
+                    <li><a href="pp.html" class="hover:text-brand-500 transition-colors">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Контакты</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="mailto:help@metadoc.live" class="hover:text-brand-500 transition-colors flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> help@metadoc.live</a></li>
+                    <li><span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Online Worldwide</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Юридический блок -->
+        <div class="max-w-7xl mx-auto px-4 pt-8 border-t border-white/5 text-[10px] text-slate-500 leading-relaxed">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div>
+                    <p class="mb-2 uppercase font-bold tracking-widest text-slate-400">Юридическая информация</p>
+                    <p class="mb-2"><strong>Статус Исполнителя:</strong> Metabolic Clinic (metadoc.live) не является медицинской клиникой и не предоставляет медицинские услуги (диагностику, лечение, назначение препаратов). Наши сотрудники действуют как консультанты-наставники и хелс-коучи.</p>
+                    <p class="mb-2"><strong>Порядок услуг:</strong> Все услуги представляют собой «обмен информацией» и носят просветительско-консультационный характер.</p>
+                </div>
+                <div>
+                    <p class="mb-2 uppercase font-bold tracking-widest text-slate-400">Отказ от ответственности</p>
+                    <p class="mb-2"><strong>Обязанность Клиента:</strong> Клиент обязуется честно предоставлять информацию о состоянии здоровья и незамедлительно уведомлять о любых изменениях своего лечащего врача.</p>
+                    <p class="mt-4">© 2026 Metabolic Clinic (metadoc.live). Все права защищены. Pharma Holding Ltd, Bahnhofstrasse 20, 8001 Zürich, Switzerland.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ru',
+                includedLanguages: 'en,uk,kk,uz,hy,az,ka,et,lv,lt',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function changeLanguage(langCode) {
+            let select = document.querySelector('.goog-te-combo');
+            if (select) {
+                select.value = langCode;
+                select.dispatchEvent(new Event('change'));
+            } else {
+                console.warn('Google Translate еще не загрузился.');
+            }
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

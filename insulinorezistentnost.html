@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Инсулинорезистентность: оптимизация метаболизма и стратегии коррекции рациона | Metabolic Clinic</title>
+    <meta name="description" content="Узнайте, как оптимизировать чувствительность к инсулину через настройку образа жизни. Информационная поддержка по коррекции рациона и метаболическому коучингу.">
+    
+    <!-- Google Fonts: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Manrope', 'sans-serif'] },
+                    colors: {
+                        brand: { 500: '#e11d48', 600: '#be123c' }, // Rose/Crimson
+                        dark: { 800: '#1e293b', 900: '#0f172a', 950: '#020617' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .h-dvh { height: 100dvh; }
+        
+        /* Скрытие скроллбара для чата */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .fade-in { animation: fadeIn 0.5s ease-in forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Для FAQ аккордеона */
+        .faq-content { transition: max-height 0.3s ease-out; max-height: 0; overflow: hidden; }
+
+        /* Кастомные стили для контента статьи */
+        .article-content h2 { font-size: 1.875rem; line-height: 2.25rem; font-weight: 700; color: #fff; margin-top: 3rem; margin-bottom: 1.5rem; }
+        .article-content h3 { font-size: 1.5rem; line-height: 2rem; font-weight: 700; color: #fff; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content p { margin-bottom: 1.5rem; color: #94a3b8; font-size: 1.125rem; line-height: 1.75rem; }
+        .article-content strong { color: #f8fafc; font-weight: 600; }
+        .article-content ul { list-style-type: none; padding-left: 0; margin-bottom: 2rem; }
+        .article-content ul li { position: relative; padding-left: 2rem; margin-bottom: 1rem; color: #94a3b8; font-size: 1.125rem; }
+        .article-content ul li::before { content: ""; position: absolute; left: 0; top: 0.6rem; width: 8px; height: 8px; border-radius: 50%; background-color: #e11d48; box-shadow: 0 0 10px rgba(225,29,72,0.5); }
+        .article-content blockquote { border-left: 4px solid #e11d48; padding-left: 1.5rem; font-style: italic; color: #cbd5e1; font-size: 1.25rem; margin: 2.5rem 0; background: rgba(30,41,59,0.5); padding: 1.5rem; border-radius: 0 1rem 1rem 0; }
+    
+        /* Стили для интеграции виджета в темную тему */
+        #google_translate_element .goog-te-gadget-simple {
+            background-color: #0f172a !important; /* Цвет dark-950 */
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            border-radius: 8px !important;
+            padding: 5px !important;
+        }
+        #google_translate_element .goog-te-gadget-simple .goog-te-menu-value span {
+            color: #94a3b8 !important; /* Цвет текста slate-400 */
+        }
+        #google_translate_element .goog-te-gadget-icon {
+            display: none !important; /* Скрываем стандартную иконку Google */
+        }
+        /* Скрываем стандартный блок виджета Google, но оставляем его функциональным */
+        .goog-te-banner-frame.skiptranslate,
+        .goog-te-balloon-frame { display: none !important; }
+        body { top: 0 !important; }
+
+        /* Кастомный селектор перевода */
+        .lang-select-trigger {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            padding: 8px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .lang-select-trigger:hover { background: rgba(255, 255, 255, 0.1); color: white; }
+    </style>
+
+    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Metabolic Clinic" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+</head>
+<body class="bg-dark-950 text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white relative pb-20 md:pb-0">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-40 bg-dark-950/80 backdrop-blur-md border-b border-white/5 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2">
+                <i data-lucide="activity" class="w-8 h-8 text-brand-500"></i>
+                <span class="text-xl font-extrabold text-white tracking-tight">Metabolic<span class="text-brand-500">Clinic</span></span>
+            </a>
+            
+            <nav class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="index#specialization" class="hover:text-white transition-colors">Специализация</a>
+                <a href="#diseases" class="hover:text-white transition-colors">Области оптимизации</a>
+                <a href="index#symptoms" class="hover:text-white transition-colors">Чек-лист</a>
+                <a href="index#protocol" class="hover:text-white transition-colors">Методология</a>
+                <a href="index#reviews" class="hover:text-white transition-colors">Отзывы</a>
+            </nav>
+            <div class="relative">
+                <div id="google_translate_element" class="hidden"></div>
+                
+                <button onclick="changeLanguage('en')" class="lang-select-trigger text-sm font-medium">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    <span>Translate</span>
+                </button>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="index#products" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white font-semibold transition-all active:scale-95">
+                    Получить аудит
+                </a>
+                <!-- <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
+                    <i data-lucide="menu"></i>
+                </button> -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент статьи -->
+    <main class="pt-32 pb-16">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Метка/Хлебные крошки -->
+            <div class="flex items-center gap-2 text-sm font-semibold text-brand-500 mb-6 uppercase tracking-wider">
+                <a href="/" class="text-slate-500 hover:text-white transition-colors">Главная</a>
+                <span class="text-slate-600">/</span>
+                <span>Метаболическая коррекция</span>
+            </div>
+
+            <!-- Обложка -->
+            <div class="w-full h-[300px] md:h-[450px] rounded-3xl overflow-hidden mb-12 relative shadow-2xl border border-white/5">
+                <img src="https://metadoc-media-uploads.s3.eu-north-1.amazonaws.com/ins.jpeg" alt="Метаболические процессы" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent"></div>
+            </div>
+
+            <!-- Заголовок -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-8 tracking-tight">
+                Инсулинорезистентность: <br>оптимизация метаболического отклика
+            </h1>
+
+            <!-- Текстовый блок -->
+            <div class="article-content">
+                <p>
+                    <strong>Инсулинорезистентность (ИР)</strong> — это функциональное состояние, при котором клетки вашего тела (мышечные, жировые и клетки печени) снижают чувствительность к гормону инсулин. Инсулин работает как «ключ», регулирующий поступление глюкозы из крови в ткани.
+                </p>
+                <p>
+                    При снижении эффективности этого механизма (резистентности), процесс усвоения энергии замедляется. Клетки не получают необходимого ресурса в должном объеме, что ведет к компенсаторному повышению уровня инсулина и формированию метаболического дисбаланса, который мы помогаем скорректировать через оптимизацию рациона.
+                </p>
+
+                <h2>Как распознать задачу: 5 ключевых маркеров</h2>
+                <p>Метаболические особенности могут проявляться через косвенные признаки, требующие внимания к образу жизни:</p>
+                <ul>
+                    <li><strong>Абдоминальные изменения.</strong> Характерное распределение жировой ткани в области талии, требующее персональной настройки плана питания.</li>
+                    <li><strong>Пищевые привычки.</strong> Выраженная потребность в быстрых углеводах как следствие особенностей энергетического обмена.</li>
+                    <li><strong>Динамика бодрости.</strong> Ощутимое снижение энергии и сонливость после приема пищи.</li>
+                    <li><strong>Состояние кожных покровов.</strong> Характерные изменения пигментации в складках кожи (Acanthosis nigricans) как маркер метаболической нагрузки.</li>
+                    <li><strong>Внешние проявления.</strong> Появление папиллом часто коррелирует с необходимостью коррекции метаболического фона.</li>
+                </ul>
+
+                <blockquote>
+                    «Инсулинорезистентность — это сигнал организма о необходимости смены стратегии питания. Своевременная оптимизация привычек позволяет восстановить баланс естественным путем.»
+                </blockquote>
+
+                <h2>Последствия игнорирования дисбаланса</h2>
+                <p>
+                    Длительное сохранение метаболической нагрузки без коррекции образа жизни может привести к системным изменениям в работе организма:
+                </p>
+                <ul>
+                    <li><strong>Стойкое нарушение обмена углеводов.</strong> Переход функционального дисбаланса в хроническую стадию.</li>
+                    <li><strong>Изменения липидного профиля.</strong> Накопление жировых отложений в тканях внутренних органов, включая печень.</li>
+                    <li><strong>Гормональная перестройка.</strong> Влияние на общую стабильность эндокринных процессов.</li>
+                    <li><strong>Нагрузка на сосудистую систему.</strong> Снижение эластичности сосудов и изменение показателей давления.</li>
+                </ul>
+
+                <h2>Методология Metabolic Clinic: экспертная оптимизация</h2>
+                <p>
+                    В рамках нашего консультационного центра мы используем комплексный подход: помогаем вам настроить рацион и образ жизни так, чтобы оптимизировать метаболический отклик организма.
+                </p>
+                <p>
+                    Наша стратегия базируется на анализе предоставленных данных (индекс HOMA, гликированный гемоглобин, показатели липидограммы), формировании персонального протокола коррекции питания, подборе нутриентной поддержки и профессиональном коучинге до достижения целевого самочувствия.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- CALL TO ACTION -->
+    <section id="products" class="py-20 bg-dark-950 border-y border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 right-1/2 translate-x-1/2 w-[800px] h-[400px] bg-brand-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Оптимизируйте работу организма</h2>
+            <p class="text-slate-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+                Запишитесь на информационный аудит или получите доступ к сопровождению консультанта. Мы проанализируем ваш рацион и составим четкую стратегию коррекции.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                <a href="index#products" class="w-full sm:w-auto px-8 py-5 bg-brand-600 hover:bg-brand-500 text-white text-lg font-bold rounded-2xl shadow-[0_0_30px_rgba(225,29,72,0.3)] hover:shadow-[0_0_40px_rgba(225,29,72,0.5)] transition-all active:scale-95 flex items-center justify-center gap-3">
+                    <i data-lucide="activity" class="w-6 h-6"></i>
+                    Выбрать программу коррекции
+                </a>
+                
+               
+            </div>
+            
+            <p class="mt-8 text-sm text-slate-500 flex items-center justify-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-500"></i> Конфиденциальный коучинг
+            </p>
+        </div>
+    </section>
+
+    <!-- Основные направления -->
+    <section id="diseases" class="py-20 bg-dark-900 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Другие области оптимизации</h2>
+                <p class="text-slate-400 text-lg">Комплексный подход к настройке метаболических параметров</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="insulinorezistentnost" class="flex flex-col p-6 bg-dark-950 border border-brand-500/30 rounded-3xl transition-all shadow-[0_0_20px_rgba(225,29,72,0.1)] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-500/10 rounded-bl-full pointer-events-none"></div>
+                    <div class="w-12 h-12 bg-brand-500/20 rounded-2xl flex items-center justify-center text-brand-500 mb-6">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold hyphens-auto text-white mb-3">Инсулинорезистентность</h3>
+                    <p class="text-sm text-slate-400 mb-6">Текущая информационная страница.</p>
+                </a>
+
+                <a href="diabet-2-tipa" class="flex flex-col p-6 bg-dark-950 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
+                    <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="droplet" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors">Диабет 2 типа</h3>
+                    <p class="text-sm text-slate-400 mb-6">Протоколы стабилизации состояния через коррекцию рациона и выход в ремиссию.</p>
+                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Подробнее <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                </a>
+
+                <a href="metabolicheskiy-sindrom" class="flex flex-col p-6 bg-dark-950 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
+                    <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors">Метаболический синдром</h3>
+                    <p class="text-sm text-slate-400 mb-6">Оптимизация веса и параметров давления за счет изменения образа жизни.</p>
+                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Подробнее <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                </a>
+
+                <a href="zhirovoy-gepatoz" class="flex flex-col p-6 bg-dark-950 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
+                    <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="flask-conical" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors">Жировой гепатоз</h3>
+                    <p class="text-sm text-slate-400 mb-6">Поддержка функционального состояния печени через персональную настройку питания.</p>
+                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Подробнее <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-dark-950 border-y border-white/5">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-12 text-center">Ответы на вопросы</h2>
+            <div class="space-y-4">
+                
+                <div class="border border-white/10 rounded-2xl bg-dark-900 overflow-hidden">
+                    <button class="w-full text-left px-6 py-5 flex justify-between items-center text-white font-semibold focus:outline-none" onclick="toggleFaq(this)">
+                        <span>Можно ли оптимизировать состояние без фармакологии?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-dark-950">
+                        <p class="px-6 pb-5 text-slate-400 text-sm">Да. Основной инструмент работы с ИР — это коррекция образа жизни: настройка рациона и физической активности. Наши консультанты-коучи помогают выстроить систему, при которой метаболические процессы стабилизируются естественным путем.</p>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 rounded-2xl bg-dark-900 overflow-hidden">
+                    <button class="w-full text-left px-6 py-5 flex justify-between items-center text-white font-semibold focus:outline-none" onclick="toggleFaq(this)">
+                        <span>Какие данные используются для анализа?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-dark-950">
+                        <p class="px-6 pb-5 text-slate-400 text-sm">Для качественной настройки питания консультанты анализируют динамику глюкозы и инсулина (индекс HOMA), гликированный гемоглобин и параметры липидограммы. Полный список необходимых параметров коуч поможет определить на ознакомительной сессии.</p>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 rounded-2xl bg-dark-900 overflow-hidden">
+                    <button class="w-full text-left px-6 py-5 flex justify-between items-center text-white font-semibold focus:outline-none" onclick="toggleFaq(this)">
+                        <span>Сколько времени занимает оптимизация процессов?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-dark-950">
+                        <p class="px-6 pb-5 text-slate-400 text-sm">Первые изменения в самочувствии и уровне энергии многие замечают уже в первые 2-3 недели коррекции рациона. Системная оптимизация клеточного отклика обычно требует от 3 до 6 месяцев регулярного соблюдения рекомендаций.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <span class="text-xl font-extrabold text-white tracking-tight block mb-4">MetaDoc<span class="text-brand-500">Clinic</span></span>
+                <p class="text-slate-400 text-sm mb-4">Центр метаболической оптимизации. Возвращаем контроль над здоровьем через работу с данными и питанием.</p>
+                <p class="text-[10px] text-slate-500 italic">* Не является медицинской организацией.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Навигация</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="index#specialization" class="hover:text-brand-500 transition-colors">Специализация</a></li>
+                    <li><a href="index#faq" class="hover:text-brand-500 transition-colors">Частые вопросы</a></li>
+                    <li><a href="pp" class="hover:text-brand-500 transition-colors">Пользовательское соглашение</a></li>
+                    <li><a href="about" class="hover:text-brand-500 transition-colors">О Нас</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Контакты</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="mailto:help@metabolic-clinic.com" class="hover:text-brand-500 transition-colors mailto_btn flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> help@metadoc.live</a></li>
+                    <li><span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Онлайн платформа</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-white/5 text-center text-slate-500 text-sm leading-relaxed">
+            <p>&copy; 2024 Metabolic Clinic. Все права защищены.</p>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+
+<script type="text/javascript">
+    // Инициализация Google Translate (скрытая)
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'ru',
+            includedLanguages: 'en,uk,kk,uz,hy,az,ka,et,lv,lt', // Постсоветские + английский
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+
+    // Надежная функция смены языка по клику на вашу кастомную кнопку
+    function changeLanguage(langCode) {
+        let select = document.querySelector('.goog-te-combo');
+        if (select) {
+            select.value = langCode;
+            select.dispatchEvent(new Event('change'));
+        } else {
+            console.warn('Google Translate еще не загрузился. Попробуйте через секунду.');
+        }
+    }
+</script>
+
+<!-- Сам скрипт Google Translate -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Пользовательское соглашение | Центр метаболической оптимизации | Metabolic Clinic</title>
+    <meta name="description" content="Пользовательское соглашение и публичная оферта платформы metadoc.live. Условия предоставления информационно-консультационных услуг.">
+    
+    <!-- Google Fonts: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Manrope', 'sans-serif'] },
+                    colors: {
+                        brand: { 500: '#e11d48', 600: '#be123c' },
+                        dark: { 800: '#1e293b', 900: '#0f172a', 950: '#020617' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .fade-in { animation: fadeIn 0.5s ease-in forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Стили для интеграции виджета перевода */
+        #google_translate_element .goog-te-gadget-simple {
+            background-color: #0f172a !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            border-radius: 8px !important;
+            padding: 5px !important;
+        }
+        #google_translate_element .goog-te-gadget-simple .goog-te-menu-value span {
+            color: #94a3b8 !important;
+        }
+        #google_translate_element .goog-te-gadget-icon {
+            display: none !important;
+        }
+        .goog-te-banner-frame.skiptranslate,
+        .goog-te-balloon-frame { display: none !important; }
+        body { top: 0 !important; }
+
+        .lang-select-trigger {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            padding: 8px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .lang-select-trigger:hover { background: rgba(255, 255, 255, 0.1); color: white; }
+    </style>
+
+    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Metabolic Clinic" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+</head>
+
+<body class="bg-dark-950 text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white relative">
+    
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-40 bg-dark-950/80 backdrop-blur-md border-b border-white/5 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <i data-lucide="activity" class="w-8 h-8 text-brand-500"></i>
+                <span class="text-xl font-extrabold text-white tracking-tight">Metabolic<span class="text-brand-500">Clinic</span></span>
+            </a>
+            
+            <nav class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="index.html#method" class="hover:text-white transition-colors">Наш метод</a>
+                <a href="index.html#diseases" class="hover:text-white transition-colors">Направления</a>
+                <a href="index.html#products" class="hover:text-white transition-colors">Разбор</a>
+                <a href="index.html#faq" class="hover:text-white transition-colors">FAQ</a>
+            </nav>
+            <div class="relative">
+                <div id="google_translate_element" class="hidden"></div>
+                
+                <button onclick="changeLanguage('en')" class="lang-select-trigger text-sm font-medium">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    <span>Translate</span>
+                </button>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="index.html#products" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white font-semibold transition-all active:scale-95">
+                    Получить разбор
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-dark-900 border-b border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 right-1/4 w-[400px] h-[400px] bg-brand-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">Пользовательское соглашение</h1>
+            <p class="text-slate-400">Публичная оферта и правила использования платформы metadoc.live</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <main class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+            
+            <div class="text-base leading-relaxed text-slate-300 space-y-6">
+                
+                <div class="p-6 bg-brand-500/10 border border-brand-500/20 rounded-2xl mb-12">
+                    <p class="font-medium text-white mb-2 flex items-center gap-2">
+                        <i data-lucide="alert-triangle" class="w-5 h-5 text-brand-500"></i> Важное уведомление:
+                    </p>
+                    <p class="text-sm">
+                        Пожалуйста, внимательно прочитайте все положения настоящего Договора. Принятие данной оферты означает полное согласие с тем, что услуги <strong>metadoc.live (Metabolic Clinic)</strong> не являются медицинскими. Если Вы отказываетесь принять условия, Вы не сможете использовать Платформу.
+                    </p>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mt-12 mb-4 border-l-4 border-brand-500 pl-4">1. ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ</h2>
+                <ul class="list-disc pl-6 space-y-3 text-slate-400">
+                    <li><strong class="text-white">«ПЛАТФОРМА»</strong> — программно-аппаратный комплекс, расположенный по адресу metadoc.live, а также все связанные с ним веб-ресурсы и сервисы, используемые для взаимодействия с Клиентом (включая, но не ограничиваясь: Telegram-боты, интерактивные формы-опросники, мессенджеры, мобильные приложения и иные интегрированные технические решения), предназначенные для коммуникации и предоставления информационно-консультационных услуг.</li>
+                    <li><strong class="text-white">«КОМПАНИЯ»</strong> — владелец Прав на Платформу, действующий как центр метаболической оптимизации образа жизни.</li>
+                    <li><strong class="text-white">«КЛИЕНТ»</strong> — дееспособное физическое лицо, использующее Платформу для получения услуг по оптимизации образа жизни и рациона.</li>
+                    <li><strong class="text-white">«ИСПОЛНИТЕЛЬ» (Консультант / Коуч)</strong> — специалист в области нутрициологии и коучинга, предоставляющий информационно-консультационные услуги на Платформе.</li>
+                    <li><strong class="text-white">«КОРРЕКЦИЯ»</strong> — процесс оптимизации рациона, режима сна и физической активности, направленный на улучшение общего метаболического состояния (не является терапией или медицинским лечением).</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-white mt-12 mb-4 border-l-4 border-brand-500 pl-4">2. СТАТУС ИСПОЛНИТЕЛЯ И ПРЕДМЕТ СОГЛАШЕНИЯ</h2>
+                <p>2.1. <strong>Предмет соглашения:</strong> Компания и Исполнители предоставляют Клиенту информационно-консультационные услуги по вопросам питания, образа жизни, анализа данных и оптимизации метаболических показателей.</p>
+                <p>2.2. <strong>Исключение медицинской деятельности:</strong> Исполнитель не является медицинским работником в рамках услуг на Платформе, не имеет статуса медицинского учреждения и не оказывает медицинских услуг. Исполнитель не осуществляет диагностику заболеваний, не назначает лечение и не выписывает рецептурные препараты.</p>
+
+                <h2 class="text-2xl font-bold text-white mt-12 mb-4 border-l-4 border-brand-500 pl-4">3. ПОРЯДОК ОКАЗАНИЯ УСЛУГ</h2>
+                <p>3.1. Услуги предоставляются в формате «обмена информацией» через защищенные каналы связи (текстовые чаты, видеозвонки, боты платформы).</p>
+                <p>3.2. На основе предоставленных Клиентом данных (в том числе результатов лабораторных исследований, которые являются исключительно справочной информацией для Исполнителя), Исполнитель формирует индивидуальную стратегию коррекции рациона и привычек.</p>
+                <p>3.3. <strong>Доступ к консультации:</strong> Ссылки на онлайн-консультацию передаются Клиенту тем же способом, посредством которого осуществлялась первичная коммуникация (через Telegram-бота, email, мобильное приложение или иной согласованный сервис).</p>
+                
+                <h2 class="text-2xl font-bold text-white mt-12 mb-4 border-l-4 border-brand-500 pl-4">4. ПРАВИЛА ОПЛАТЫ, ОТМЕНЫ И ПЕРЕНОСА КОНСУЛЬТАЦИЙ</h2>
+                <p>4.1. <strong>Предоплата:</strong> Все услуги на Платформе оказываются исключительно на условиях 100% (стопроцентной) предварительной оплаты.</p>
+                <p>4.2. <strong>Правила отмены и возврата:</strong> Если Клиент отменяет назначенную онлайн-консультацию менее чем за 24 часа (одни сутки) до согласованного времени ее начала, уплаченные денежные средства <strong>возврату не подлежат</strong>. Полный возврат средств возможен только в случае отмены консультации не позднее, чем за 24 часа до ее начала.</p>
+                <p>4.3. <strong>Перенос времени:</strong> Если до начала консультации остается от 0 до 24 часов, Клиент имеет право перенести время консультации на другое доступное время только <strong>1 (один) раз</strong>. Повторный перенос в рамках оплаченной услуги не допускается.</p>
+                <p>4.4. <strong>Форма запроса:</strong> Любой запрос на отмену или перенос времени онлайн-консультации осуществляется <strong>строго через соответствующую форму запроса</strong>. Ссылка на данную форму направляется Клиенту в том же электронном письме или сообщении чат-бота, где содержится ссылка на саму онлайн-консультацию.</p>
+
+                <h2 class="text-2xl font-bold text-white mt-12 mb-4 border-l-4 border-brand-500 pl-4">5. ПРАВА И ОБЯЗАННОСТИ СТОРОН (ОБЯЗАТЕЛЬНОЕ УСЛОВИЕ)</h2>
+                <p>5.1. <strong>Консультация с врачом:</strong> Перед началом использования любых рекомендаций Исполнителя, Клиент обязан проконсультироваться со своим лечащим врачом для исключения медицинских противопоказаний и определения совместимости рекомендаций с текущим состоянием здоровья.</p>
+                <p>5.2. <strong>Уведомление о заболеваниях:</strong> Клиент обязан честно и полно отвечать на вопросы Исполнителя (в формах, ботах и личном общении), а также в обязательном порядке сообщать о наличии подтвержденных диагнозов, острых состояний или хронических заболеваний, требующих наблюдения у профильных врачей.</p>
+
+                <h2 class="text-2xl font-bold text-white mt-12 mb-4 border-l-4 border-brand-500 pl-4">6. ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ (DISCLAIMER)</h2>
+                <p>6.1. <strong>Статус рекомендаций:</strong> Все рекомендации, планы питания и коучинг-сессии носят исключительно справочный, ознакомительный и рекомендательный характер.</p>
+                <p>6.2. <strong>Индивидуальный выбор:</strong> Клиент самостоятельно принимает решение о применении полученной на Платформе информации в своей жизни, полностью осознавая ответственность за последствия своих действий.</p>
+                <p>6.3. <strong>Отсутствие гарантий:</strong> Исполнитель не гарантирует излечение от каких-либо заболеваний и не несет ответственности за отсутствие ожидаемых Клиентом результатов. Результат коррекции целиком зависит от индивидуальных особенностей организма и уровня дисциплины самого Клиента.</p>
+                <p>6.4. <strong>Нутрицевтики:</strong> Любые рекомендации по приему биологически активных добавок (БАДов), витаминов или нутрицевтиков не являются назначением лекарственных средств. Клиент осознает, что добавки не являются лекарствами, и решение об их приеме должно обсуждаться с врачом.</p>
+
+                <h2 class="text-2xl font-bold text-white mt-12 mb-4 border-l-4 border-brand-500 pl-4">7. ОГРАНИЧЕНИЕ ОТВЕТСТВЕННОСТИ (LIABILITY LIMITATION)</h2>
+                <p>7.1. <strong>Полный отказ от ответственности:</strong> Компания и Исполнитель не несут материальной, моральной или иной ответственности за любые последствия, прямые или косвенные убытки, ухудшение состояния здоровья или иные негативные результаты, возникшие в процессе или после использования информации с Платформы. Ответственность Компании и Исполнителя ограничена предельным размером стоимости оплаченной услуги. Клиент действует исключительно на свой страх и риск.</p>
+
+                <h2 class="text-2xl font-bold text-white mt-12 mb-4 border-l-4 border-brand-500 pl-4">8. КОНФИДЕНЦИАЛЬНОСТЬ И ОБРАБОТКА ДАННЫХ</h2>
+                <p>8.1. Платформа обрабатывает персональные данные согласно международным стандартам (GDPR) и законодательству о защите персональных данных. Данные хранятся в зашифрованном виде на серверах ЕС.</p>
+                <p>8.2. Все файлы (анкеты, результаты анализов), отправленные в чат-бот, мессенджеры или загруженные на платформу, хранятся для процесса коучинга в течение 365 дней, после чего автоматически удаляются в целях безопасности.</p>
+                <p>8.3. Маркетинговые коммуникации: Клиент предоставляет Компании право использовать предоставленную информацию (включая контактные данные) для маркетинговых коммуникаций, уведомлений об услугах и свободно оперировать ею в рамках процесса оказания услуг и взаимодействия с Клиентом.</p>
+
+                <h2 class="text-2xl font-bold text-white mt-12 mb-4 border-l-4 border-brand-500 pl-4">9. ПОРЯДОК РАЗРЕШЕНИЯ СПОРОВ</h2>
+                <p>Все споры, возникающие между Сторонами, решаются исключительно путем мирных переговоров. В случае возникновения претензий, Клиент обязан направить письменное обращение на электронную почту Компании.</p>
+
+                <h2 class="text-2xl font-bold text-white mt-12 mb-4 border-l-4 border-brand-500 pl-4">10. ЗАКЛЮЧИТЕЛЬНЫЕ ПОЛОЖЕНИЯ</h2>
+                <p>Оформление записи на разбор, оплата услуг или начало общения с Консультантом (в том числе через чат-бота) означает безоговорочное принятие Клиентом всех условий данного Соглашения и подтверждение того факта, что он полностью проинформирован о немедицинском характере услуг metadoc.live.</p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Юридический Дисклеймер -->
+    <section class="py-12 bg-dark-950 border-t border-brand-500/20 mt-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 md:p-8 rounded-3xl bg-dark-900 border border-brand-500/10 shadow-2xl">
+                <div class="w-16 h-16 bg-brand-500/10 rounded-2xl flex items-center justify-center shrink-0">
+                    <i data-lucide="scale" class="w-8 h-8 text-brand-500"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Официальный статус платформы</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                        <strong class="text-slate-200">Metabolic Clinic (metadoc.live)</strong> — это центр метаболической оптимизации образа жизни. Наши программы носят исключительно информационный и коучинговый характер, не являются медицинской помощью и не отменяют назначений вашего лечащего врача.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <span class="text-xl font-extrabold text-white tracking-tight block mb-4">Metabolic<span class="text-brand-500">Clinic</span></span>
+                <p class="text-slate-400 text-sm mb-6 max-w-sm">Центр метаболической оптимизации. Возвращаем контроль над здоровьем через работу с данными и питанием.</p>
+                
+                <div class="flex items-start gap-3 mt-4 text-slate-400 text-sm">
+                    <i data-lucide="building-2" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                    <div>
+                        <strong class="text-white block mb-1">Главный офис:</strong>
+                        Bahnhofstrasse 20, 8001 Zürich, Switzerland<br>
+                        Pharma Holding Ltd
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4">Навигация</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="index.html#method" class="hover:text-brand-500 transition-colors">Наш метод</a></li>
+                    <li><a href="index.html#diseases" class="hover:text-brand-500 transition-colors">Направления</a></li>
+                    <li><a href="index.html#products" class="hover:text-brand-500 transition-colors">Программы</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4">Контакты</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="mailto:help@metadoc.live" class="hover:text-brand-500 transition-colors flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> help@metadoc.live</a></li>
+                    <li><a href="https://forms.gle/M8cSibPZQeeLzLhq7" target="_blank" class="hover:text-brand-500 transition-colors flex items-center gap-2">Поддержка</a></li>
+                    <li><span class="flex items-center gap-2 text-slate-500"><i data-lucide="map-pin" class="w-4 h-4"></i> Онлайн платформа (Worldwide)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-sm">
+            <div>
+                &copy; 2026 Metabolic Clinic (metadoc.live). Все права защищены.
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-xs">
+                <a href="pp.html" class="hover:text-slate-300 transition-colors">Политика конфиденциальности</a>
+                <!-- <a href="pp.html" class="hover:text-slate-300 transition-colors">Публичная оферта</a> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                alert('Навигация мобильной версии');
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ru',
+                includedLanguages: 'en,uk,kk,uz,hy,az,ka,et,lv,lt',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function changeLanguage(langCode) {
+            let select = document.querySelector('.goog-te-combo');
+            if (select) {
+                select.value = langCode;
+                select.dispatchEvent(new Event('change'));
+            } else {
+                console.warn('Google Translate еще не загрузился.');
+            }
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
