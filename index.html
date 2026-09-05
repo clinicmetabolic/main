@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="uk" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Metabolic Clinic | Центр метаболической оптимизации и управления сахаром</title>
-    <meta name="description" content="Естественная коррекция диабета 2 типа. Система метаболической оптимизации: нутрициология, анализ данных и коучинг для работы с первопричиной заболевания.">
+    <title>Metabolic Clinic | Центр метаболічної оптимізації | Корекція діабету 2 типу</title>
+    <meta name="description" content="Природна корекція діабету 2 типу. Система метаболічної оптимізації: нутриціологія, аналіз даних та коучинг для роботи з першопричиною захворювання.">
     
     <!-- Google Fonts: Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +38,8 @@
         .fade-in { animation: fadeIn 0.5s ease-in forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
+        .faq-content { transition: max-height 0.3s ease-out; max-height: 0; overflow: hidden; }
+
         .lang-link {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -60,7 +62,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Metabolic Clinic" />
     <link rel="manifest" href="img/favicon/site.webmanifest" />
-
 </head>
 <body class="bg-dark-950 text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white relative pb-20 md:pb-0">
     
@@ -74,21 +75,20 @@
             
             <nav class="hidden md:flex gap-6 text-sm font-medium">
                 <a href="#method" class="hover:text-white transition-colors">Наш метод</a>
-                <a href="#diseases" class="hover:text-white transition-colors">Направления</a>
+                <a href="#diseases" class="hover:text-white transition-colors">Напрямки</a>
                 <a href="#symptoms" class="hover:text-white transition-colors">Чек-лист</a>
-                <a href="#reviews" class="hover:text-white transition-colors">Отзывы</a>
-                
+                <a href="#reviews" class="hover:text-white transition-colors">Відгуки</a>
             </nav>
             
             <div class="flex items-center gap-4">
-                <!-- Ссылка на украинскую версию -->
-                <a href="index_ua.html" class="lang-link text-sm font-medium">
+                <!-- Ссылка на русскую версию -->
+                <a href="index_ru.html" class="lang-link text-sm font-medium">
                     <i data-lucide="languages" class="w-4 h-4"></i>
-                    <span>UA</span>
+                    <span>RU</span>
                 </a>
 
                 <a href="#products" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white font-semibold transition-all active:scale-95">
-                    Пройти метаболический аудит
+                    Отримати розбір
                 </a>
             </div>
         </div>
@@ -100,20 +100,20 @@
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-sm font-semibold mb-8 animate-pulse">
-                <i data-lucide="zap" class="w-4 h-4"></i> Центр метаболической оптимизации
+                <i data-lucide="zap" class="w-4 h-4"></i> Центр метаболічної оптимізації
             </div>
             
             <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight max-w-5xl mx-auto">
-                Естественная коррекция диабета 2 типа: возвращаем контроль над сахаром <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-rose-400">естественными методами через управление питанием</span>.
+                Природна корекція діабету 2 типу: повертаємо контроль над цукром <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-rose-400">без лікарської залежності</span>.
             </h1>
             
             <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Ваше тело обладает огромным ресурсом к восстановлению. Мы лишь даем правильные инструкции, чтобы «разблокировать» нормальную работу обмена веществ.
+                Ваше тіло має величезний ресурс для відновлення. Ми лише даємо правильні інструкції, щоб «розблокувати» нормальну роботу обміну речовин.
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#products" class="px-8 py-4 bg-brand-600 hover:bg-brand-500 text-white text-lg font-bold rounded-2xl shadow-[0_0_30px_rgba(225,29,72,0.3)] hover:shadow-[0_0_40px_rgba(225,29,72,0.5)] transition-all active:scale-95 flex items-center justify-center gap-2">
-                    Записаться на метаболический разбор
+                    Записатися на метаболічний розбір
                     <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </a>
             </div>
@@ -124,8 +124,8 @@
     <section id="method" class="py-20 bg-dark-900 border-y border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 max-w-3xl mx-auto">
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Как мы возвращаем здоровье</h2>
-                <p class="text-slate-400 text-lg">Мы не заглушаем симптомы. Мы перепрограммируем ваш метаболический отклик на молекулярном уровне.</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Як ми повертаємо здоров'я</h2>
+                <p class="text-slate-400 text-lg">Ми не заглушаємо симптоми. Ми перепрограмуємо ваш метаболічний відгук на молекулярному рівні.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -133,24 +133,24 @@
                     <div class="w-14 h-14 bg-brand-500/10 rounded-2xl flex items-center justify-center mb-6 text-brand-500 group-hover:scale-110 transition-transform">
                         <i data-lucide="network" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Система оптимизации</h3>
-                    <p class="text-slate-400 leading-relaxed">Мы объединяем передовую нутрициологию, анализ данных и коучинг для работы исключительно с первопричиной вашего заболевания.</p>
+                    <h3 class="text-xl font-bold text-white mb-4">Система оптимізації</h3>
+                    <p class="text-slate-400 leading-relaxed">Ми об'єднуємо передову нутриціологію, аналіз даних та коучинг для роботи виключно з першопричиною вашого захворювання.</p>
                 </div>
 
                 <div class="p-8 bg-dark-950 border border-white/5 rounded-3xl hover:border-brand-500/50 transition-colors group">
                     <div class="w-14 h-14 bg-brand-500/10 rounded-2xl flex items-center justify-center mb-6 text-brand-500 group-hover:scale-110 transition-transform">
                         <i data-lucide="microscope" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Работа с откликом</h3>
-                    <p class="text-slate-400 leading-relaxed">Мы не работаем с симптомами. Мы анализируем вашу биохимию, тонко настраиваем питание и добиваемся стойкой метаболической ремиссии.</p>
+                    <h3 class="text-xl font-bold text-white mb-4">Робота з відгуком</h3>
+                    <p class="text-slate-400 leading-relaxed">Ми не працюємо з симптомами. Ми аналізуємо вашу біохімію, тонко налаштовуємо харчування та досягаємо стійкої метаболічної ремісії.</p>
                 </div>
 
                 <div class="p-8 bg-dark-950 border border-white/5 rounded-3xl hover:border-brand-500/50 transition-colors group">
                     <div class="w-14 h-14 bg-brand-500/10 rounded-2xl flex items-center justify-center mb-6 text-brand-500 group-hover:scale-110 transition-transform">
                         <i data-lucide="line-chart" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Математическая точность</h3>
-                    <p class="text-slate-400 leading-relaxed">Математически точный подход к весу и показателям крови. Мы отслеживаем динамику восстановления вашего организма на каждом этапе.</p>
+                    <h3 class="text-xl font-bold text-white mb-4">Математична точність</h3>
+                    <p class="text-slate-400 leading-relaxed">Математично точний підхід до ваги та показників крові. Ми відстежуємо динаміку відновлення вашого організму на кожному етапі.</p>
                 </div>
             </div>
         </div>
@@ -160,46 +160,46 @@
     <section id="diseases" class="py-20 bg-dark-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">С чем мы работаем</h2>
-                <p class="text-slate-400 text-lg">Состояния, которые мы успешно корректируем через изменение образа жизни</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">З чим ми працюємо</h2>
+                <p class="text-slate-400 text-lg">Стани, які ми успішно корегуємо через зміну способу життя</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="flex flex-col p-6 bg-dark-900 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
+                <a href="#" class="flex flex-col p-6 bg-dark-900 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
                     <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="activity" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors break-words hyphens-auto">Инсулинорезистентность</h3>
-                    <p class="text-sm text-slate-400 mb-6">Восстановление чувствительности клеток, снижение веса и устранение тяги к сладкому.</p>
-                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Подробнее <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
-                </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors break-words hyphens-auto">Інсулінорезистентність</h3>
+                    <p class="text-sm text-slate-400 mb-6">Відновлення чутливості клітин, зниження ваги та усунення тяги до солодкого.</p>
+                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Детальніше <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                </a>
 
-                <div class="flex flex-col p-6 bg-dark-900 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
+                <a href="#" class="flex flex-col p-6 bg-dark-900 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
                     <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="droplet" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors break-words hyphens-auto">Сахарный диабет 2 типа</h3>
-                    <p class="text-sm text-slate-400 mb-6">Оптимизация питания для стабилизации уровня сахара крови и выхода в ремиссию.</p>
-                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Подробнее <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
-                </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors break-words hyphens-auto">Цукровий діабет 2 типу</h3>
+                    <p class="text-sm text-slate-400 mb-6">Оптимізація харчування для стабілізації рівня цукру крові та виходу в ремісію.</p>
+                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Детальніше <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                </a>
 
-                <div class="flex flex-col p-6 bg-dark-900 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
+                <a href="#" class="flex flex-col p-6 bg-dark-900 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
                     <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="heart-pulse" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors break-words hyphens-auto">Метаболический синдром</h3>
-                    <p class="text-sm text-slate-400 mb-6">Комплексная коррекция веса, показателей давления и нарушений липидного обмена.</p>
-                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Подробнее <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
-                </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors break-words hyphens-auto">Метаболічний синдром</h3>
+                    <p class="text-sm text-slate-400 mb-6">Комплексна корекція ваги, показників тиску та порушень ліпідного обміну.</p>
+                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Детальніше <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                </a>
 
-                <div class="flex flex-col p-6 bg-dark-900 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
+                <a href="#" class="flex flex-col p-6 bg-dark-900 border border-white/5 rounded-3xl hover:border-brand-500 hover:-translate-y-1 transition-all group shadow-lg">
                     <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="flask-conical" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors break-words hyphens-auto">Жировой гепатоз</h3>
-                    <p class="text-sm text-slate-400 mb-6">Разгрузка печени за счет выверенной стратегии питания и изменения образа жизни.</p>
-                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Подробнее <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
-                </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors break-words hyphens-auto">Жировий гепатоз</h3>
+                    <p class="text-sm text-slate-400 mb-6">Розвантаження печінки завдяки вивіреній стратегії харчування та зміни способу життя.</p>
+                    <span class="mt-auto text-brand-500 font-semibold text-sm flex items-center gap-1">Детальніше <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                </a>
             </div>
         </div>
     </section>
@@ -208,44 +208,44 @@
     <section id="symptoms" class="py-24 relative border-t border-white/5 bg-dark-900">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Чек-лист: Когда пора действовать</h2>
-                <p class="text-brand-500 font-semibold text-lg">Нашли 3+ признака? Запишитесь на Шаг 1, чтобы получить персональную карту анализов.</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Чек-лист: Коли час діяти</h2>
+                <p class="text-brand-500 font-semibold text-lg">Якщо у вас є 3 і більше ознак — ваш метаболізм у критичній зоні.</p>
             </div>
 
             <div class="space-y-4">
                 <div class="flex gap-4 p-5 bg-dark-800/30 border border-red-500/20 rounded-2xl items-start">
                     <i data-lucide="utensils" class="text-red-500 mt-1 shrink-0"></i>
                     <div>
-                        <h4 class="text-white font-bold text-lg">«Пищевая ловушка»</h4>
-                        <p class="text-slate-400">Сонливость после еды и постоянное, неконтролируемое чувство голода.</p>
+                        <h4 class="text-white font-bold text-lg">«Харчова пастка»</h4>
+                        <p class="text-slate-400">Сонливість після їжі та постійне, неконтрольоване відчуття голоду.</p>
                     </div>
                 </div>
                 <div class="flex gap-4 p-5 bg-dark-800/30 border border-red-500/20 rounded-2xl items-start">
                     <i data-lucide="life-buoy" class="text-red-500 mt-1 shrink-0"></i>
                     <div>
-                        <h4 class="text-white font-bold text-lg">«Спасательный круг»</h4>
-                        <p class="text-slate-400">Висцеральный жир на животе, который невозможно убрать обычными диетами.</p>
+                        <h4 class="text-white font-bold text-lg">«Рятувальний круг»</h4>
+                        <p class="text-slate-400">Вісцеральний жир на животі, який неможливо прибрати звичайними дієтами.</p>
                     </div>
                 </div>
                 <div class="flex gap-4 p-5 bg-dark-800/30 border border-red-500/20 rounded-2xl items-start">
                     <i data-lucide="brain" class="text-red-500 mt-1 shrink-0"></i>
                     <div>
-                        <h4 class="text-white font-bold text-lg">«Затуманенность»</h4>
-                        <p class="text-slate-400">Хроническая усталость с самого утра и невозможность сосредоточиться.</p>
+                        <h4 class="text-white font-bold text-lg">«Затуманеність»</h4>
+                        <p class="text-slate-400">Хронічна втома з самого ранку та неможливість зосередитися.</p>
                     </div>
                 </div>
                 <div class="flex gap-4 p-5 bg-dark-800/30 border border-red-500/20 rounded-2xl items-start">
                     <i data-lucide="scan-face" class="text-red-500 mt-1 shrink-0"></i>
                     <div>
-                        <h4 class="text-white font-bold text-lg">«Кожные сигналы»</h4>
-                        <p class="text-slate-400">Папилломы, акне и потемнения кожи на шее/в складках (яркий маркер ИР).</p>
+                        <h4 class="text-white font-bold text-lg">«Шкірні сигнали»</h4>
+                        <p class="text-slate-400">Папіломи, акне та потемніння шкіри на шиї/у складках (яскравий маркер ІР).</p>
                     </div>
                 </div>
                 <div class="flex gap-4 p-5 bg-dark-800/30 border border-red-500/20 rounded-2xl items-start">
                     <i data-lucide="flask-conical" class="text-red-500 mt-1 shrink-0"></i>
                     <div>
-                        <h4 class="text-white font-bold text-lg">«Лабораторные маркеры»</h4>
-                        <p class="text-slate-400">Повышенные АЛТ/АСТ, триглицериды, «плохой» холестерин в анализах.</p>
+                        <h4 class="text-white font-bold text-lg">«Лабораторні маркери»</h4>
+                        <p class="text-slate-400">Підвищені АЛТ/АСТ, тригліцериди, «поганий» холестерин в аналізах.</p>
                     </div>
                 </div>
             </div>
@@ -259,14 +259,15 @@
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 max-w-3xl mx-auto">
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Ваш маршрут к восстановлению</h2>
-                <p class="text-slate-400 text-lg">Оформление и связь со специалистами происходят через нашу защищенную систему.</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Ваш маршрут до відновлення</h2>
+                <p class="text-slate-400 text-lg">Оформлення та зв'язок із фахівцями відбуваються через нашого захищеного Telegram-бота.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
+                <!-- ШАГ 1 -->
                 <div class="bg-dark-900 p-8 rounded-3xl border border-brand-500/50 shadow-[0_0_30px_rgba(225,29,72,0.1)] flex flex-col h-full relative overflow-hidden transform hover:-translate-y-1 transition-transform">
-                    <div class="absolute top-0 right-0 bg-brand-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl z-10 uppercase tracking-wide">Шаг 1: Фундамент</div>
+                    <div class="absolute top-0 right-0 bg-brand-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl z-10 uppercase tracking-wide">Крок 1: Фундамент</div>
                     <div class="flex justify-between items-start mb-6 mt-4">
                         <div class="w-14 h-14 bg-brand-500/20 rounded-2xl flex items-center justify-center text-brand-500">
                             <i data-lucide="search-check" class="w-7 h-7"></i>
@@ -275,20 +276,21 @@
                             <span class="text-3xl font-extrabold text-white block">3000 <span class="text-sm font-normal text-slate-500">грн</span></span>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Первичный метаболический аудит</h3>
-                    <p class="text-slate-400 mb-6 flex-1">Глубокое погружение в вашу биохимию: специалист оцифровывает ваш образ жизни, питание, историю заболеваний и дефициты.</p>
+                    <h3 class="text-2xl font-bold text-white mb-4">Первинний метаболічний аудит</h3>
+                    <p class="text-slate-400 mb-6 flex-1">Глибоке занурення у вашу біохімію: фахівець оцифровує ваш спосіб життя, харчування, історію захворювань та дефіцити.</p>
                     <ul class="space-y-3 mb-8 text-slate-300 border-t border-white/5 pt-6">
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-500 w-5 h-5 shrink-0 mt-0.5"></i> <span>Длительная онлайн-сессия (знакомство и опрос)</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-500 w-5 h-5 shrink-0 mt-0.5"></i> <span>Первичный вектор действий и срочные корректировки</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-500 w-5 h-5 shrink-0 mt-0.5"></i> <span>Персональный список анализов</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-500 w-5 h-5 shrink-0 mt-0.5"></i> <span>Тривала онлайн-сесія (знайомство та опитування)</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-500 w-5 h-5 shrink-0 mt-0.5"></i> <span>Первинний вектор дій та термінові коригування</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brand-500 w-5 h-5 shrink-0 mt-0.5"></i> <span>Персональний список необхідних лабораторних аналізів</span></li>
                     </ul>
                     <a href="https://booking.metadoc.live" target="_blank" class="w-full py-4 bg-brand-600 hover:bg-brand-500 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-[0_0_15px_rgba(225,29,72,0.3)]">
-                        <i data-lucide="zap" class="w-5 h-5"></i> Начать аудит
+                        <i data-lucide="zap" class="w-5 h-5"></i> Почати аудит
                     </a>
                 </div>
 
+                <!-- ШАГ 2: Видео -->
                 <div class="bg-dark-900 p-8 rounded-3xl border border-white/10 hover:border-white/30 transition-all flex flex-col h-full relative group">
-                    <div class="absolute top-0 right-0 bg-slate-800 text-slate-300 border-b border-l border-white/10 text-xs font-bold px-4 py-1 rounded-bl-xl z-10 uppercase tracking-wide">Шаг 2: Стратегия</div>
+                    <div class="absolute top-0 right-0 bg-slate-800 text-slate-300 border-b border-l border-white/10 text-xs font-bold px-4 py-1 rounded-bl-xl z-10 uppercase tracking-wide">Крок 2: Стратегія</div>
                     <div class="flex justify-between items-start mb-6 mt-4">
                         <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
                             <i data-lucide="microscope" class="w-7 h-7"></i>
@@ -297,20 +299,21 @@
                             <span class="text-3xl font-extrabold text-white block">3000 <span class="text-sm font-normal text-slate-500">грн</span></span>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Повторная онлайн-сессия</h3>
-                    <p class="text-slate-400 mb-6 flex-1">Детальная расшифровка лабораторных тестов, оценка метаболического профиля и индивидуального плана действий.</p>
+                    <h3 class="text-2xl font-bold text-white mb-4">Повторна онлайн-сесія</h3>
+                    <p class="text-slate-400 mb-6 flex-1">Оформлюється після здачі аналізів. Детальна розшифровка тестів, формування діагнозу та індивідуального плану дій.</p>
                     <ul class="space-y-3 mb-8 text-slate-300 border-t border-white/5 pt-6">
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-blue-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Разбор результатов анализов</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-blue-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Протокол питания</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-blue-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Схема нутрицевтиков</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-blue-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Глибокий розбір результатів аналізів</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-blue-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Математично вивірений протокол харчування</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-blue-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Схема нутрицевтичної підтримки</span></li>
                     </ul>
                     <a href="https://booking.metadoc.live" target="_blank" class="w-full py-4 bg-dark-800 hover:bg-dark-700 border border-white/10 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95">
-                        <i data-lucide="video" class="w-5 h-5"></i> Записаться на сессию
+                        <i data-lucide="video" class="w-5 h-5"></i> Записатися на сесію
                     </a>
                 </div>
 
+                <!-- ШАГ 2: Коучинг -->
                 <div class="bg-dark-900 p-8 rounded-3xl border border-white/10 hover:border-white/30 transition-all flex flex-col h-full relative group">
-                    <div class="absolute top-0 right-0 bg-slate-800 text-slate-300 border-b border-l border-white/10 text-xs font-bold px-4 py-1 rounded-bl-xl z-10 uppercase tracking-wide">Шаг 3: СОПРОВОЖДЕНИЕ</div>
+                    <div class="absolute top-0 right-0 bg-slate-800 text-slate-300 border-b border-l border-white/10 text-xs font-bold px-4 py-1 rounded-bl-xl z-10 uppercase tracking-wide">Крок 2: Підтримка</div>
                     <div class="flex justify-between items-start mb-6 mt-4">
                         <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
                             <i data-lucide="message-square-text" class="w-7 h-7"></i>
@@ -319,15 +322,15 @@
                             <span class="text-3xl font-extrabold text-white block">2000 <span class="text-sm font-normal text-slate-500">грн</span></span>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Текстовое сопровождение</h3>
-                    <p class="text-slate-400 mb-6 flex-1">Неделя индивидуального текстового коучинга для корректировки плана в реальных условиях.</p>
+                    <h3 class="text-2xl font-bold text-white mb-4">Текстовий супровід</h3>
+                    <p class="text-slate-400 mb-6 flex-1">Тиждень індивідуального текстового коучингу. Ідеально для коригування плану в реальних умовах та трекінгу результатів.</p>
                     <ul class="space-y-3 mb-8 text-slate-300 border-t border-white/5 pt-6">
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-emerald-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Чат со специалистом на 7 дней</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-emerald-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Разбор рациона ежедневно</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-emerald-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Настройка под ваши реакции</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-emerald-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Доступ до чату з фахівцем на 7 днів</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-emerald-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Щоденні відповіді та розбір раціону</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-emerald-400 w-5 h-5 shrink-0 mt-0.5"></i> <span>Тонке налаштування плану під ваші реакції</span></li>
                     </ul>
                     <a href="https://booking.metadoc.live" target="_blank" class="w-full py-4 bg-dark-800 hover:bg-dark-700 border border-white/10 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95">
-                        <i data-lucide="bot" class="w-5 h-5"></i> Начать коучинг
+                        <i data-lucide="bot" class="w-5 h-5"></i> Почати коучинг
                     </a>
                 </div>
 
@@ -335,11 +338,11 @@
         </div>
     </section>
 
-    <!-- Отзывы -->
+    <!-- Відгуки -->
     <section id="reviews" class="py-20 bg-dark-900 border-t border-white/5 relative overflow-hidden">
         <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="flex items-center justify-between mb-12">
-                <h2 class="text-3xl md:text-5xl font-bold text-white">Динамика восстановления</h2>
+                <h2 class="text-3xl md:text-5xl font-bold text-white">Динаміка відновлення</h2>
                 
                 <div class="hidden md:flex gap-3">
                     <button id="slider-prev" class="w-12 h-12 rounded-full bg-dark-950 border border-white/10 hover:bg-brand-600 hover:border-brand-500 text-white flex items-center justify-center transition-all active:scale-90">
@@ -361,11 +364,11 @@
                             <img src="img/anna.jpeg" alt="Анна" class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="text-white font-bold text-lg">Анна, 42 года</h4>
-                            <p class="text-sm text-brand-500">Инсулинорезистентность</p>
+                            <h4 class="text-white font-bold text-lg">Анна, 42 роки</h4>
+                            <p class="text-sm text-brand-500">Інсулінорезистентність</p>
                         </div>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">«Много лет безуспешно боролась с лишним весом. После аудита и изменения питания за месяц ушло 5 кг, сахар стабилизировался. Появилась энергия жить!»</p>
+                    <p class="text-slate-400 leading-relaxed">«Багато років безуспішно боролася з зайвою вагою. Після аудиту та зміни харчування за місяць пішло 5 кг, цукор стабілізувався. З'явилася енергія жити!»</p>
                 </div>
 
                 <!-- Story 2 -->
@@ -373,14 +376,14 @@
                     <i data-lucide="quote" class="absolute top-6 right-6 w-8 h-8 text-brand-500/20"></i>
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-14 h-14 bg-slate-700 rounded-full overflow-hidden shrink-0">
-                            <img src="img/mihail.jpeg" alt="Михаил" class="w-full h-full object-cover">
+                            <img src="img/mihail.jpeg" alt="Михайло" class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="text-white font-bold text-lg">Михаил, 50 лет</h4>
-                            <p class="text-sm text-brand-500">Метаболический синдром</p>
+                            <h4 class="text-white font-bold text-lg">Михайло, 50 років</h4>
+                            <p class="text-sm text-brand-500">Метаболічний синдром</p>
                         </div>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">«Думал, что давление — это просто возраст. Специалисты центра доказали обратное. Строгая стратегия и корректировка питания. Результаты анализов радуют.»</p>
+                    <p class="text-slate-400 leading-relaxed">«Думав, що тиск — це просто вік. Фахівці центру довели протилежне. Чітка стратегія та коригування харчування. Результати аналізів тішать.»</p>
                 </div>
 
                 <!-- Story 3 -->
@@ -388,14 +391,14 @@
                     <i data-lucide="quote" class="absolute top-6 right-6 w-8 h-8 text-brand-500/20"></i>
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-14 h-14 bg-slate-700 rounded-full overflow-hidden shrink-0">
-                            <img src="img/olena.jpeg" alt="Елена" class="w-full h-full object-cover">
+                            <img src="img/olena.jpeg" alt="Олена" class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="text-white font-bold text-lg">Елена, 36 лет</h4>
-                            <p class="text-sm text-brand-500">Синдром хронической усталости</p>
+                            <h4 class="text-white font-bold text-lg">Олена, 36 років</h4>
+                            <p class="text-sm text-brand-500">Синдром хронічної втоми</p>
                         </div>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">«Просыпалась уже уставшей, без 3 чашек кофе день даже не начинался. Команда помогла выстроить циркадные ритмы и скорректировать нутрицевтики. Уже через 3 недели вернулся фокус!»</p>
+                    <p class="text-slate-400 leading-relaxed">«Прокидалася вже втомленою, без 3 чашок кави день навіть не починався. Команда допомогла вибудувати циркадні ритми та скоригувати нутрицевтики. Вже через 3 тижні повернувся фокус!»</p>
                 </div>
 
                 <!-- Story 4 -->
@@ -403,14 +406,14 @@
                     <i data-lucide="quote" class="absolute top-6 right-6 w-8 h-8 text-brand-500/20"></i>
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-14 h-14 bg-slate-700 rounded-full overflow-hidden shrink-0">
-                            <img src="img/sergey.jpeg" alt="Сергей" class="w-full h-full object-cover">
+                            <img src="img/sergey.jpeg" alt="Сергій" class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="text-white font-bold text-lg">Сергей, 45 лет</h4>
-                            <p class="text-sm text-brand-500">Высокий утренний гликемический индекс</p>
+                            <h4 class="text-white font-bold text-lg">Сергій, 45 років</h4>
+                            <p class="text-sm text-brand-500">Високий ранковий глікемічний індекс</p>
                         </div>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">«Думал, что правильное питание — это только грудка и гречка. Здесь пересмотрели мой рацион под личный график. Утренний сахар упал с 6.8 до 5.2 без жёстких ограничений.»</p>
+                    <p class="text-slate-400 leading-relaxed">«Гадав, що правильне харчування — це тільки грудка та гречка. Тут переглянули мій раціон під особистий графік. Ранковий цукор впав з 6.8 до 5.2 без жорстких обмежень.»</p>
                 </div>
 
                 <!-- Story 5 -->
@@ -421,11 +424,11 @@
                             <img src="img/olga.jpeg" alt="Ольга" class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="text-white font-bold text-lg">Ольга, 39 лет</h4>
-                            <p class="text-sm text-brand-500">Послеродовое восстановление &amp; ТТГ</p>
+                            <h4 class="text-white font-bold text-lg">Ольга, 39 років</h4>
+                            <p class="text-sm text-brand-500">Післяпологове відновлення &amp; ТТГ</p>
                         </div>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">«После вторых родов вес встал мертвым грузом, постоянно тянуло на сладкое. Хелс-коуч со мной 24/7 в чате. Выровняли работу щитовидки и сняли тягу за полтора месяца.»</p>
+                    <p class="text-slate-400 leading-relaxed">«Після других пологів вага зупинилася на місці, постійно тягнуло на солодке. Хелс-коуч зі мною 24/7 у чаті. Вирівняли роботу щитоподібної залози та зняли тягу за півтора місяця.»</p>
                 </div>
 
                 <!-- Story 6 -->
@@ -433,27 +436,27 @@
                     <i data-lucide="quote" class="absolute top-6 right-6 w-8 h-8 text-brand-500/20"></i>
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-14 h-14 bg-slate-700 rounded-full overflow-hidden shrink-0">
-                            <img src="img/dmitriy.jpeg" alt="Дмитрий" class="w-full h-full object-cover">
+                            <img src="img/dmitriy.jpeg" alt="Дмитро" class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="text-white font-bold text-lg">Дмитрий, 48 лет</h4>
-                            <p class="text-sm text-brand-500">Снижение NEAT и мышечного тонуса</p>
+                            <h4 class="text-white font-bold text-lg">Дмитро, 48 років</h4>
+                            <p class="text-sm text-brand-500">Зниження NEAT та м'язового тонусу</p>
                         </div>
                     </div>
-                    <p class="text-slate-400 leading-relaxed">«Сидячая работа убивала суставы и уровень энергии. Эксперт по фитнесу подобрал программу бытовой активности без изнурительных залов. -8 см в талии за 2 месяца!»</p>
+                    <p class="text-slate-400 leading-relaxed">«Сидяча робота вбивала суглоби та рівень енергії. Експерт з фітнесу підібрав програму побутової активності без виснажливих залів. -8 см у талії за 2 місяці!»</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Дисклеймер -->
+    <!-- Юридический Дисклеймер -->
     <section class="py-12 bg-dark-950 border-t border-brand-500/20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 rounded-2xl bg-brand-500/5 border border-brand-500/10">
                 <i data-lucide="info" class="w-10 h-10 text-brand-500 shrink-0"></i>
                 <p class="text-sm text-slate-400 leading-relaxed text-center md:text-left">
-                    <strong class="text-slate-200">Metabolic Clinic</strong> — это центр метаболической оптимизации образа жизни. Программы и стратегии носят исключительно информационный характер. Услуги не являются медицинской помощью и не отменяют назначений врача.
+                    <strong class="text-slate-200">Metabolic Clinic</strong> — це центр метаболічної оптимізації способу життя. Програми, розбори та стратегії, що ми надаємо, мають виключно інформаційний та коучинговий характер. Послуги сервісу не є медичною допомогою, не ставлять діагнози та не скасовують призначень вашого лікаря.
                 </p>
             </div>
         </div>
@@ -464,36 +467,27 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
                 <span class="text-xl font-extrabold text-white tracking-tight block mb-4">Metabolic<span class="text-brand-500">Clinic</span></span>
-                <p class="text-slate-400 text-sm">Центр метаболической оптимизации. Возвращаем контроль над здоровьем через данные и питание.</p>
+                <p class="text-slate-400 text-sm mb-4">Центр метаболічної оптимізації. Повертаємо контроль над здоров'ям через роботу з даними та харчуванням.</p>
+                <p class="text-[10px] text-slate-500 italic">* Не є медичною організацією.</p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Навигация</h4>
+                <h4 class="text-white font-bold mb-4">Навігація</h4>
                 <ul class="space-y-2 text-sm text-slate-400">
                     <li><a href="#method" class="hover:text-brand-500 transition-colors">Наш метод</a></li>
-                    <li><a href="#diseases" class="hover:text-brand-500 transition-colors">Направления</a></li>
-                    <li><a href="#products" class="hover:text-brand-500 transition-colors">Программы и цены</a></li>
-                    <li><a href="team.html" class="hover:text-brand-500 transition-colors">Специалисты</a></li>
+                    <li><a href="#diseases" class="hover:text-brand-500 transition-colors">Напрямки</a></li>
+                    <li><a href="#" class="hover:text-brand-500 transition-colors">Про нас</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Контакты</h4>
+                <h4 class="text-white font-bold mb-4">Контакти</h4>
                 <ul class="space-y-2 text-sm text-slate-400">
                     <li><a href="mailto:help@metadoc.live" class="hover:text-brand-500 transition-colors flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> help@metadoc.live</a></li>
-                    <li><a href="https://forms.gle/M8cSibPZQeeLzLhq7" target="_blank" class="hover:text-brand-500 transition-colors flex items-center gap-2">Поддержка</a></li>
-                    <li><a href="about.html" class="hover:text-brand-500 transition-colors"><span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Online Worldwide</span></a></li>
+                    <li><span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Онлайн платформа (Worldwide)</span></li>
                 </ul>
             </div>
         </div>
-        
-        <!-- Юридический блок и копирайт -->
-        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-sm">
-            <div>
-                &copy; 2026 Metabolic Clinic. Все права защищены.
-            </div>
-            <div class="flex flex-wrap justify-center gap-6 text-xs">
-                <a href="pp.html" class="hover:text-slate-300 transition-colors">Политика конфиденциальности</a>
-                <!-- <a href="terms.html" class="hover:text-slate-300 transition-colors">Публичная оферта</a> -->
-            </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/5 text-center text-slate-500 text-sm">
+            2024 Metabolic Clinic. Всі права захищені.
         </div>
     </footer>
 
