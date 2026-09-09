@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завантаження: МЕТАБОЛІЧНИЙ АРХІТЕКТОР | Metabolic Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { brand: { 500: '#e11d48', 600: '#be123c' }, dark: { 800: '#1e293b', 900: '#0f172a', 950: '#020617' } } } }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Підключення reCAPTCHA API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <!-- Підключення Toastify JS (Toaster бібліотека) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Підключення UAParser JS (для визначення пристрою, ОС та браузера) -->
+    <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@1.0.36/src/ua-parser.min.js"></script>
+</head>
+<body class="bg-dark-950 text-slate-300 font-sans antialiased pt-28 pb-12">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-40 bg-dark-950/80 backdrop-blur-md border-b border-white/5 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2">
+                <i data-lucide="activity" class="w-8 h-8 text-brand-500"></i>
+                <span class="text-xl font-extrabold text-white tracking-tight">Metabolic<span class="text-brand-500">Clinic</span></span>
+            </a>
+            
+            <!-- Значок логотипу Instagram у шапці -->
+            <a href="https://www.instagram.com/shemetov.metabolic" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="p-2.5 bg-white/5 hover:bg-brand-500/20 border border-white/10 hover:border-brand-500/50 rounded-xl text-slate-300 hover:text-brand-500 transition-all active:scale-95">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4">
+        
+        <!-- Заголовок -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Отримайте книгу «МЕТАБОЛІЧНИЙ АРХІТЕКТОР»</h1>
+            <p class="text-slate-400">Введіть ваш email нижче — і ми миттєво надішлемо персональне посилання для завантаження PDF-файлу на вашу пошту.</p>
+        </header>
+
+        <!-- 1. Форма введення email -->
+        <section class="bg-dark-900 border border-brand-500/30 p-8 rounded-3xl mb-12 shadow-[0_0_30px_rgba(225,29,72,0.1)]">
+            <h2 class="text-xl font-bold text-white mb-6 flex items-center justify-center gap-2 text-center">
+                <i data-lucide="mail" class="text-brand-500"></i> 1. Вкажіть пошту для отримання матеріалу
+            </h2>
+            
+            <form id="emailForm" onsubmit="handleFormSubmit(event)" class="space-y-4 max-w-md mx-auto">
+                <div>
+                    <label for="email" class="block text-xs uppercase font-bold tracking-wider text-slate-400 mb-2">Ваш Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="name@example.com" 
+                        class="w-full px-5 py-4 bg-dark-950 border border-white/10 rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors"
+                    >
+                </div>
+
+                <!-- Контейнер для reCAPTCHA -->
+                <div class="flex justify-center my-4">
+                    <div class="g-recaptcha" data-sitekey="6LeJY3YtAAAAAPooLhzQyb8rN-GUw4T8gX4IzzRa" data-theme="dark"></div>
+                </div>
+                
+                <button type="submit" class="w-full py-5 bg-brand-600 hover:bg-brand-500 text-white font-black text-lg rounded-2xl shadow-[0_0_20px_rgba(225,29,72,0.3)] transition-all active:scale-95 flex items-center justify-center gap-2">
+                    <i data-lucide="send" class="w-5 h-5"></i> НАДІСЛАТИ КНИГУ НА ПОШТУ
+                </button>
+            </form>
+
+            <p class="mt-4 text-xs text-slate-500 text-center">Ми поважаємо вашу приватність і не надсилаємо спам.</p>
+        </section>
+
+        <!-- 2. Від автора -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <i data-lucide="user" class="text-brand-500"></i> 2. Привіт від автора
+            </h2>
+            <div class="prose prose-invert prose-slate max-w-none text-slate-400">
+                <blockquote class="border-l-4 border-brand-500 pl-4 py-2 italic text-lg text-slate-200 mb-6">
+                    «Я був у цій же точці відчаю і знаю, як це — боротися з власним тілом після 40»
+                </blockquote>
+                <p>Привіт! Я — Павло Шеметов, метаболічний архітектор. У 42 роки я важив на 22 кг більше, прокидався втомленим і безуспішно намагався схуднути на дієтах. Кожен зрив супроводжувався соромом, поки я не зрозумів головне: <strong>після 40 років справа взагалі не в силі волі.</strong></p>
+                <p class="mt-4">У цій книзі я описав систему, яка допомогла мені повернути енергію та нормалізувати гормональний фон без голодування.</p>
+            </div>
+        </section>
+
+        <!-- 3. Персональна діагностика -->
+        <section class="bg-white/5 border border-white/10 p-8 rounded-3xl mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <i data-lucide="stethoscope" class="text-brand-500"></i> 3. Персональна діагностика
+            </h2>
+            <p class="text-slate-400 mb-6">Книга дає загальну схему, але кожен організм унікальний. Якщо ви прагнете точково розібратися у своїй ситуації з фахівцями нашої клініки — запрошую вас на повноцінну персональну діагностику.</p>
+            <ul class="space-y-3 mb-8 text-sm">
+                <li class="flex items-start gap-2 text-slate-300"><i data-lucide="check" class="text-brand-500 w-5 h-5"></i> Глибокий аналіз причин, чому вага «стоїть» саме у вашому випадку.</li>
+                <li class="flex items-start gap-2 text-slate-300"><i data-lucide="check" class="text-brand-500 w-5 h-5"></i> Розбір гормональних тригерів (вечірній голод, хронічна втома).</li>
+                <li class="flex items-start gap-2 text-slate-300"><i data-lucide="check" class="text-brand-500 w-5 h-5"></i> Розробка персональної стратегії відновлення метаболізму.</li>
+            </ul>
+            <a href="https://metadoc.live/" target="_blank" rel="noopener noreferrer" class="block w-full py-4 bg-white hover:bg-slate-200 text-dark-950 font-bold text-center rounded-2xl transition-all shadow-lg active:scale-95">
+                👉 ЗАПИСАТИСЯ НА ДІАГНОСТИКУ В METABOLIC CLINIC
+            </a>
+        </section>
+
+        <!-- 4. Соцмережі -->
+        <section class="text-center">
+            <h2 class="text-xl font-bold text-white mb-4">4. Давайте залишатися на зв'язку!</h2>
+            <p class="text-slate-400 mb-6">Я щодня ділюся розборами раціонів та порадами у своєму блозі.</p>
+            
+            <!-- Великий акцентний значок логотипу Instagram у нижньому блоці -->
+            <div class="flex justify-center">
+                <a href="https://www.instagram.com/shemetov.metabolic" target="_blank" rel="noopener noreferrer" aria-label="Instagram Павла Шеметова" class="inline-flex items-center justify-center w-14 h-14 bg-dark-900 border border-brand-500/40 hover:border-brand-500 text-brand-500 hover:text-white hover:bg-brand-600 rounded-full transition-all shadow-lg hover:shadow-[0_0_20px_rgba(225,29,72,0.4)] active:scale-95">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <p class="text-sm text-slate-600 mt-8 italic">Не отримуєте лист? Напишіть мені в Instagram, і я надішлю вам PDF напряму.</p>
+        </section>
+
+    </main>
+
+    <!-- Оверлей завантаження -->
+    <div id="loader-overlay" class="fixed inset-0 z-50 bg-dark-950/90 backdrop-blur-lg flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="loader-content flex flex-col items-center justify-center">
+            <!-- Контейнер для логотипу/іконки -->
+            <div class="w-24 h-24 bg-white/10 border border-white/20 rounded-3xl flex items-center justify-center mb-5 backdrop-blur-md shadow-[0_0_50px_rgba(225,29,72,0.35)] animate-pulse">
+                <i data-lucide="activity" class="w-12 h-12 text-brand-500"></i>
+            </div>
+            
+            <!-- Логотип / Назва -->
+            <span class="text-2xl font-extrabold tracking-tight text-white drop-shadow-md">
+                Metabolic<span class="text-brand-500">Clinic</span>
+            </span>
+
+            <!-- Індикатор завантаження / Текст -->
+            <p class="text-slate-300/80 text-[11px] tracking-[0.25em] uppercase font-bold mt-3 animate-pulse">
+                Завантаження...
+            </p>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbzev5N--3WOhPZl5Ptg8Ebnlmsboo__yTyGlTxIX7C2gd6TgzY80-yHp2Esh64rYKX8Vw/exec';
+
+        // 1. Отримання UTM-міток з URL
+        function getUtmParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                utm_source: params.get('utm_source') || '',
+                utm_medium: params.get('utm_medium') || '',
+                utm_campaign: params.get('utm_campaign') || '',
+                utm_term: params.get('utm_term') || '',
+                utm_content: params.get('utm_content') || ''
+            };
+        }
+
+        // 2. Отримання даних про пристрій через UAParser
+        function getDeviceInfo() {
+            const parser = new UAParser();
+            const result = parser.getResult();
+            return {
+                deviceType: result.device.type || 'desktop',
+                os: `${result.os.name || ''} ${result.os.version || ''}`.trim(),
+                browser: `${result.browser.name || ''} ${result.browser.version || ''}`.trim()
+            };
+        }
+
+        // 3. Отримання IP та країни через безкоштовний сервіс ipapi.co
+        async function getGeoInfo() {
+            try {
+                const response = await fetch('https://ipapi.co/json/');
+                if (!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                return {
+                    ip: data.ip || 'Unknown',
+                    country: data.country_name || 'Unknown',
+                    city: data.city || 'Unknown'
+                };
+            } catch (e) {
+                console.warn('Неможливо отримати IP/геолокацію:', e);
+                return { ip: 'Unknown', country: 'Unknown', city: 'Unknown' };
+            }
+        }
+
+        // Допоміжна функція для показу сповіщень Toastify
+        function showToast(message, isError = false) {
+            Toastify({
+                text: message,
+                duration: 4000,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: isError 
+                        ? "linear-gradient(to right, #ef4444, #be123c)" 
+                        : "linear-gradient(to right, #10b981, #059669)",
+                    borderRadius: "12px",
+                    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.5)",
+                    fontFamily: "sans-serif",
+                    fontSize: "14px",
+                    fontWeight: "600"
+                }
+            }).showToast();
+        }
+
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Перевірка проходження капчі
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (!recaptchaResponse) {
+                showToast('Будь ласка, підтвердіть, що ви не робот (пройдіть reCAPTCHA).', true);
+                return;
+            }
+
+            const email = document.getElementById('email').value;
+            const loaderOverlay = document.getElementById('loader-overlay');
+
+            // Показ оверлею завантаження
+            loaderOverlay.classList.remove('opacity-0', 'pointer-events-none');
+
+            // Збір аналітичних даних
+            const utm = getUtmParams();
+            const device = getDeviceInfo();
+            const geo = await getGeoInfo();
+            const referrer = document.referrer || 'Direct';
+
+            const payload = {
+                email: email,
+                recaptchaToken: recaptchaResponse,
+                referrer: referrer,
+                ip: geo.ip,
+                country: geo.country,
+                city: geo.city,
+                deviceType: device.deviceType,
+                os: device.os,
+                browser: device.browser,
+                utm_source: utm.utm_source,
+                utm_medium: utm.utm_medium,
+                utm_campaign: utm.utm_campaign,
+                utm_term: utm.utm_term,
+                utm_content: utm.utm_content
+            };
+
+            try {
+                // КЛЮЧОВА ЗМІНА: Використовуємо text/plain без mode: 'no-cors'
+                await fetch(GAS_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'text/plain;charset=utf-8',
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                showToast('Дані успішно відправлено! Перенаправлення...');
+
+                setTimeout(() => {
+                    window.location.href = 'thank_you.html';
+                }, 1500);
+
+            } catch (error) {
+                console.error('Помилка відправки:', error);
+                loaderOverlay.classList.add('opacity-0', 'pointer-events-none');
+                showToast('Сталася помилка при відправці. Спробуйте ще раз.', true);
+            }
+        }
+    </script>
+</body>
+</html>
