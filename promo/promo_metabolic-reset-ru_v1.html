@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Павел Шеметов | Metabolic Clinic — Метаболическая оптимизация</title>
+    <meta name="description" content="Система метаболической оптимизации: как похудеть без изнурительных диет и спортзала и вернуть контроль над весом.">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Manrope', 'sans-serif'] },
+                    colors: {
+                        brand: { 500: '#e11d48', 600: '#be123c' },
+                        dark: { 800: '#1e293b', 900: '#0f172a', 950: '#020617' }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .fade-in { animation: fadeIn 0.4s ease-in forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+        /* Плавная анимация появления модального окна */
+        #book-popup {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        #book-popup.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        #book-popup .popup-content {
+            transform: scale(0.95);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        #book-popup.active .popup-content {
+            transform: scale(1);
+        }
+
+        /* Убираем скроллбар для карусели кейсов на мобилках */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-dark-950 text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white relative pb-20 md:pb-0">
+    
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-40 bg-dark-950/80 backdrop-blur-md border-b border-white/5 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2">
+                <i data-lucide="activity" class="w-8 h-8 text-brand-500"></i>
+                <span class="text-xl font-extrabold text-white tracking-tight">Metabolic<span class="text-brand-500">Clinic</span></span>
+            </a>
+            
+            <div class="flex items-center gap-4">
+                <a href="https://www.instagram.com/shemetov.metabolic" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-600 hover:border-brand-500 transition-all p-2">
+                    <img src="Instagram.png" alt="Instagram" class="w-full h-full object-contain">
+                </a>
+
+                <a href="https://booking.metadoc.live?utm_source=google&utm_medium=cpc&utm_campaign=promo_metabolic_reset_ru_v1&utm_content=page" target="_blank" class="flex items-center gap-2 px-5 py-2.5 bg-brand-600 hover:bg-brand-500 rounded-xl text-white font-semibold transition-all active:scale-95 shadow-[0_0_15px_rgba(225,29,72,0.3)] text-sm">
+                    Записаться на консультацию
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Блок 1: Hero -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex flex-col justify-center min-h-dvh">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-500/20 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-sm font-semibold mb-6 animate-pulse">
+                    <i data-lucide="zap" class="w-4 h-4"></i> Метаболическая оптимизация тела
+                </span>
+                
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-snug tracking-tight">
+                    «Это мой личный результат: <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-rose-400">Минус 22 кг</span> без жестких диет и спортзала»
+                </h1>
+                
+                <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                    Почему классические диеты делают вас лишь уставшими и больными? Проблема не в силе воли — инсулин запер жировые депо. Начните восстановление под руководством специалиста.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-4">
+                    <a href="https://booking.metadoc.live?utm_source=google&utm_medium=cpc&utm_campaign=promo_metabolic_reset_ru_v1&utm_content=page" target="_blank" class="px-8 py-4 bg-brand-600 hover:bg-brand-500 text-white font-black text-lg rounded-2xl shadow-[0_0_30px_rgba(225,29,72,0.3)] hover:shadow-[0_0_40px_rgba(225,29,72,0.5)] transition-all active:scale-95 flex items-center justify-center gap-2">
+                        Начать восстановление (Консультация)
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+                <div class="text-center lg:text-left mb-6">
+                    <a href="#method" class="text-slate-400 hover:text-brand-500 text-sm underline transition-colors">или узнать больше о методе 👇</a>
+                </div>
+
+                <div class="pt-2 flex justify-center lg:justify-start">
+                    <a href="https://www.instagram.com/shemetov.metabolic" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-dark-900 border border-white/5 text-slate-300 hover:text-white hover:border-brand-500/50 text-sm font-medium transition-all">
+                        <img src="Instagram.png" alt="Instagram" class="w-5 h-5 object-contain"> Следите за мной в Instagram
+                    </a>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 w-full">
+                <img src="img.jpeg" alt="Павел Шеметов — Результат похудения до и после" class="rounded-3xl shadow-2xl border-2 border-brand-500/20 w-full object-cover max-h-[500px]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок «Кто такой Павел Шеметов» (Credentials + Фото эксперта) -->
+    <section class="py-16 bg-dark-900 border-y border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <span class="text-brand-500 font-bold tracking-widest text-xs uppercase mb-2 block text-center">Экспертность и доверие</span>
+            <h2 class="text-3xl font-bold text-white mb-10 text-center">Кто такой Павел Шеметов?</h2>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/3 w-full">
+                    <img src="shemetov.jpeg" alt="Павел Шеметов" class="rounded-3xl shadow-xl border border-white/10 w-full object-cover max-h-[350px]">
+                </div>
+                <div class="lg:w-2/3 bg-dark-950 p-8 rounded-3xl border border-white/5 space-y-4 text-slate-400 leading-relaxed">
+                    <p>Я основатель проекта <strong>Metabolic Clinic</strong> и практикующий специалист по метаболической оптимизации. Мой подход базируется не на окружающих мифах про «меньше ешь и больше двигайся», а на сухой биохимии, эндокринологии и анализе данных (инженерный подход к здоровью).</p>
+                    <p>Пройдя личную трансформацию (минус 22 кг), я разработал авторскую систему выхода из метаболической ямы без пожизненной фармы и голодания, которую успешно внедряю для пациентов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 2: Личная история -->
+    <section class="py-20 bg-dark-950">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Я знаю, что вы чувствуете, потому что сам был в этой точке</h2>
+            <div class="text-slate-400 mx-auto text-left space-y-4">
+                <p>Я смотрел в зеркало и видел истощенного человека с оттеками и усталостью. Я истязал себя калориями, но вес возвращался с процентами.</p>
+                <p><strong>Главное открытие:</strong> ваше тело — это не калькулятор калорий, а сложный гормональный механизм.</p>
+                <ul class="my-6 space-y-3">
+                    <li class="flex items-center gap-3">✅ Я остановил войну с телом.</li>
+                    <li class="flex items-center gap-3">✅ Восстановил инсулин и запустил жиросжигание.</li>
+                    <li class="flex items-center gap-3">✅ Результат: -22 кг без срывов, энергия и легкость.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок «Как проходит работа» -->
+    <section id="method" class="py-20 bg-dark-900 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <span class="text-brand-500 font-bold tracking-widest text-xs uppercase mb-2 block text-center">Прозрачный процесс</span>
+            <h2 class="text-3xl font-bold text-white mb-6 text-center">Как проходит работа? (Без страха и сложностей)</h2>
+            <p class="text-slate-400 text-center max-w-2xl mx-auto mb-12">Никаких взвешиваний еды на весах до грамма, изнурительных тренировок или непонятных экзотических продуктов.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-dark-950 p-8 rounded-3xl border border-white/5">
+                    <div class="text-brand-500 mb-4"><i data-lucide="file-text" class="w-8 h-8"></i></div>
+                    <h4 class="font-bold text-white mb-2 text-xl">1. Базовые анализы</h4>
+                    <p class="text-sm text-slate-400">Вы сдаете простой и четкий список из 5-6 базовых анализов крови (никаких лишних трат на дорогие тесты).</p>
+                </div>
+                <div class="bg-dark-950 p-8 rounded-3xl border border-white/5">
+                    <div class="text-brand-500 mb-4"><i data-lucide="utensils" class="w-8 h-8"></i></div>
+                    <h4 class="font-bold text-white mb-2 text-xl">2. Привычный рацион</h4>
+                    <p class="text-sm text-slate-400">Мы формируем питание из продуктов, которые вы покупаете в обычном супермаркете, без голода и срывов.</p>
+                </div>
+                <div class="bg-dark-950 p-8 rounded-3xl border border-white/5">
+                    <div class="text-brand-500 mb-4"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                    <h4 class="font-bold text-white mb-2 text-xl">3. Контроль инсулина</h4>
+                    <p class="text-sm text-slate-400">Снижаем инсулин через биохимию, благодаря чему тело само начинает сжигать жировые запасы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof (12 кейсов с мобильным скроллом) -->
+    <section class="py-24 bg-dark-950 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <span class="text-brand-500 font-bold tracking-widest text-xs uppercase mb-2 block text-center">Реальные истории пациентов</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 text-center">Метод работает не только на мне</h2>
+            <p class="text-slate-400 text-lg text-center max-w-2xl mx-auto mb-16">Вот чего достигают люди, которые остановили войну с собственным телом и настроили биохимию.</p>
+            
+            <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 md:grid md:grid-cols-2 lg:grid-cols-3 no-scrollbar">
+                
+                <!-- Кейс 1 -->
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-dark-900 p-6 rounded-3xl border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-500/20 text-brand-500 font-bold flex items-center justify-center border border-brand-500/30">Е.П.</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Елена, 44 года</h4>
+                                <span class="text-emerald-400 font-bold text-xs bg-emerald-500/10 px-2.5 py-0.5 rounded-full">-14 кг за 3 месяца</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-2"><strong>Точка А:</strong> Постоянная усталость, высокий инсулин, отеки, вес стоял годами несмотря на диеты.</p>
+                        <p class="text-xs text-slate-300"><strong>Точка Б:</strong> Снижение веса на 14 кг, нормализация сахара, возвращение бодрости без спортзала.</p>
+                    </div>
+                </div>
+
+                <!-- Кейс 2 -->
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-dark-900 p-6 rounded-3xl border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center border border-blue-500/30">М.В.</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Михаил, 48 лет</h4>
+                                <span class="text-emerald-400 font-bold text-xs bg-emerald-500/10 px-2.5 py-0.5 rounded-full">-11 кг / сахар в норме</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-2"><strong>Точка А:</strong> Преддиабет, висцеральный жир на животе, давление, жировой гепатоз.</p>
+                        <p class="text-xs text-slate-300"><strong>Точка Б:</strong> Ровный сахар крови, минус 11 кг, печень в норме по результатам УЗИ.</p>
+                    </div>
+                </div>
+
+                <!-- Кейс 3 -->
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-dark-900 p-6 rounded-3xl border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-500/20 text-brand-500 font-bold flex items-center justify-center border border-brand-500/30">С.И.</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Светлана, 51 год</h4>
+                                <span class="text-emerald-400 font-bold text-xs bg-emerald-500/10 px-2.5 py-0.5 rounded-full">-9 кг / без срывов</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4"><strong>Точка А:</strong> Менопауза, резкий набор веса, тревожность, нулевая энергия.</p>
+                        <p class="text-xs text-slate-300"><strong>Точка Б:</strong> Стабилизация гормонов через питание, минус 9 кг, здоровый сон.</p>
+                    </div>
+                </div>
+
+                <!-- Кейс 4 -->
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-dark-900 p-6 rounded-3xl border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center border border-blue-500/30">А.О.</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Андрей, 39 лет</h4>
+                                <span class="text-emerald-400 font-bold text-xs bg-emerald-500/10 px-2.5 py-0.5 rounded-full">-16 кг</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4"><strong>Точка А:</strong> Начальная стадия диабета 2 типа, большой живот, хроническая усталость.</p>
+                        <p class="text-xs text-slate-300"><strong>Точка Б:</strong> Снял диагноз-диабет с контроля врача, вес уменьшился на 16 кг.</p>
+                    </div>
+                </div>
+
+                <!-- Кейс 5 -->
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-dark-900 p-6 rounded-3xl border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-500/20 text-brand-500 font-bold flex items-center justify-center border border-brand-500/30">М.С.</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Марина, 46 лет</h4>
+                                <span class="text-emerald-400 font-bold text-xs bg-emerald-500/10 px-2.5 py-0.5 rounded-full">-8 кг за месяц</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4"><strong>Точка А:</strong> Постоянные срывы на сладкое, отечность по утрам, раздражительность.</p>
+                        <p class="text-xs text-slate-300"><strong>Точка Б:</strong> Убрала тягу к сахару без силы воли, легкость в теле с первых недель.</p>
+                    </div>
+                </div>
+
+                <!-- Кейс 6 -->
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-dark-900 p-6 rounded-3xl border border-white/5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center border border-blue-500/30">О.М.</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Олег, 53 года</h4>
+                                <span class="text-emerald-400 font-bold text-xs bg-emerald-500/10 px-2.5 py-0.5 rounded-full">-12 кг / давление в норме</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4"><strong>Точка А:</strong> Гипертония, лишний вес, тяжесть в правом подреберье (гепатоз).</p>
+                        <p class="text-xs text-slate-300"><strong>Точка Б:</strong> Давление стабилизировалось, минус 12 кг, печень восстановлена по анализам.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Чек-лист симптомов -->
+    <section id="symptoms" class="py-20 bg-dark-900 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Чек-лист: Когда пора остановиться и заняться биохимией</h2>
+                <p class="text-brand-500 font-semibold text-lg">Нашли хотя бы 2 признака? Вашему организму нужна консультация специалиста.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex gap-4 p-5 bg-dark-950 border border-white/5 rounded-2xl items-start">
+                    <i data-lucide="check-circle" class="text-brand-500 mt-1 shrink-0"></i>
+                    <p class="text-slate-300">Сонливость после еды и постоянная тяга на сладкое или мучное.</p>
+                </div>
+                <div class="flex gap-4 p-5 bg-dark-950 border border-white/5 rounded-2xl items-start">
+                    <i data-lucide="check-circle" class="text-brand-500 mt-1 shrink-0"></i>
+                    <p class="text-slate-300">Живот («спасательный круг»), который не исчезает от любых диет и упражнений.</p>
+                </div>
+                <div class="flex gap-4 p-5 bg-dark-950 border border-white/5 rounded-2xl items-start">
+                    <i data-lucide="check-circle" class="text-brand-500 mt-1 shrink-0"></i>
+                    <p class="text-slate-300">Утренняя усталость: проснулся — уже устал, нет энергии на день.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Продукты и цены -->
+    <section id="products" class="py-24 bg-dark-950 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-500/10 text-brand-400 text-sm font-bold rounded-full mb-6 border border-brand-500/20">
+                    ⚠️ Внимание: Павел берет не более 10 новых пациентов в месяц для качественного сопровождения.
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Ваш маршрут к восстановлению</h2>
+                <p class="text-slate-400 text-lg">Выберите удобный формат старта через нашу защищенную систему бронирования.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-dark-900 p-8 rounded-3xl border border-brand-500/50 shadow-[0_0_30px_rgba(225,29,72,0.1)] flex flex-col h-full relative">
+                    <div class="absolute top-0 right-0 bg-brand-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl z-10 uppercase tracking-wide">Шаг 1: Старт</div>
+                    <h3 class="text-2xl font-bold text-white mb-2 mt-4">Первичная консультация</h3>
+                    <p class="text-slate-400 mb-6 flex-1 text-sm">Глубокое погружение в биохимию: оцифровка образа жизни, привычек и формирование списка анализов.</p>
+                    <div class="text-3xl font-extrabold text-white mb-6">3000 <span class="text-lg text-slate-500 font-normal">грн</span></div>
+                    <a href="https://booking.metadoc.live?utm_source=google&utm_medium=cpc&utm_campaign=promo_metabolic_reset_ru_v1&utm_content=page" target="_blank" class="w-full py-4 bg-brand-600 hover:bg-brand-500 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-[0_0_15px_rgba(225,29,72,0.3)]">
+                        Забронировать место
+                    </a>
+                </div>
+
+                <div class="bg-dark-900 p-8 rounded-3xl border border-white/10 flex flex-col h-full relative">
+                    <div class="absolute top-0 right-0 bg-slate-800 text-slate-300 border-b border-l border-white/10 text-xs font-bold px-4 py-1 rounded-bl-xl z-10 uppercase tracking-wide">Шаг 2: Стратегия</div>
+                    <h3 class="text-2xl font-bold text-white mb-2 mt-4">Повторная онлайн-сессия</h3>
+                    <p class="text-slate-400 mb-6 flex-1 text-sm">Расшифровка анализов, персональный протокол питания и схема нутрицевтиков.</p>
+                    <div class="text-3xl font-extrabold text-white mb-6">3000 <span class="text-lg text-slate-500 font-normal">грн</span></div>
+                    <a href="https://booking.metadoc.live?utm_source=google&utm_medium=cpc&utm_campaign=promo_metabolic_reset_ru_v1&utm_content=page" target="_blank" class="w-full py-4 bg-dark-800 hover:bg-dark-700 border border-white/10 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95">
+                        Забронировать место
+                    </a>
+                </div>
+
+                <div class="bg-dark-900 p-8 rounded-3xl border border-white/10 flex flex-col h-full relative">
+                    <div class="absolute top-0 right-0 bg-slate-800 text-slate-300 border-b border-l border-white/10 text-xs font-bold px-4 py-1 rounded-bl-xl z-10 uppercase tracking-wide">Шаг 3: Сопровождение</div>
+                    <h3 class="text-2xl font-bold text-white mb-2 mt-4">Текстовое сопровождение</h3>
+                    <p class="text-slate-400 mb-6 flex-1 text-sm">Неделя индивидуального коучинга и коррекции рациона в реальном времени.</p>
+                    <div class="text-3xl font-extrabold text-white mb-6">2000 <span class="text-lg text-slate-500 font-normal">грн</span></div>
+                    <a href="https://booking.metadoc.live?utm_source=google&utm_medium=cpc&utm_campaign=promo_metabolic_reset_ru_v1&utm_content=page" target="_blank" class="w-full py-4 bg-dark-800 hover:bg-dark-700 border border-white/10 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95">
+                        Начать сопровождение
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок FAQ (Частые вопросы) -->
+    <section class="py-20 bg-dark-900 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4">
+            <span class="text-brand-500 font-bold tracking-widest text-xs uppercase mb-2 block text-center">Вопросы и ответы</span>
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Частые вопросы пациентов</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-dark-950 p-6 rounded-2xl border border-white/5">
+                    <h4 class="font-bold text-white text-lg mb-2">Нужно ли ходить в спортзал?</h4>
+                    <p class="text-sm text-slate-400">Нет. Основа нашей методики — работа с гормонами и питанием. Никаких изнурительных тренировок не требуется.</p>
+                </div>
+                <div class="bg-dark-950 p-6 rounded-2xl border border-white/5">
+                    <h4 class="font-bold text-white text-lg mb-2">Какие анализы нужно сдавать?</h4>
+                    <p class="text-sm text-slate-400">На первичной консультации мы формируем минимальный и доступный список из 5-6 базовых показателей крови, которые можно сдать в любой лаборатории.</p>
+                </div>
+                <div class="bg-dark-950 p-6 rounded-2xl border border-white/5">
+                    <h4 class="font-bold text-white text-lg mb-2">Придется ли голодать или отказываться от мяса?</h4>
+                    <p class="text-sm text-slate-400">Нет. Рацион формируется индивидуально под ваши вкусы и привычки (мы учитываем вегетарианство или любовь к мясу), обеспечивая полную сытость.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-20 px-4 text-center bg-dark-950 border-t border-white/5">
+        <div class="max-w-2xl mx-auto">
+            <h3 class="text-2xl font-bold text-white mb-6">Готовы вернуть контроль над телом без срывов и истощения?</h3>
+            <a href="https://booking.metadoc.live?utm_source=google&utm_medium=cpc&utm_campaign=promo_metabolic_reset_ru_v1&utm_content=page" target="_blank" class="inline-block px-10 py-5 bg-brand-600 hover:bg-brand-500 text-white font-black text-lg rounded-2xl shadow-[0_0_30px_rgba(225,29,72,0.4)] transition-all active:scale-95">
+                👉 ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ (3000 ГРН)
+            </a>
+            <div class="mt-8 flex justify-center">
+                <a href="https://www.instagram.com/shemetov.metabolic" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-dark-900 border border-white/5 text-slate-300 hover:text-white hover:border-brand-500/50 text-sm font-medium transition-all">
+                    <img src="Instagram.png" alt="Instagram" class="w-4 h-4 object-contain"> Мы в Instagram @shemetov.metabolic
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- POPUP с Exit-Intent (Мобильный + ПК) -->
+    <div id="book-popup" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm px-4">
+        <div class="popup-content bg-dark-900 border border-brand-500/30 p-8 rounded-3xl max-w-lg w-full relative shadow-2xl">
+            <button id="close-popup" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl font-bold">&times;</button>
+            
+            <div class="w-12 h-12 bg-brand-500/10 rounded-2xl flex items-center justify-center text-brand-500 mb-4">
+                <i data-lucide="gift" class="w-6 h-6"></i>
+            </div>
+            <span class="text-brand-500 font-bold tracking-widest text-xs uppercase mb-2 block">Специальный подарок</span>
+            <h3 class="text-2xl font-extrabold text-white mb-4">Не готовы к консультации сразу?</h3>
+            <p class="text-slate-400 text-sm mb-6">Заберите бесплатную пошаговую инструкцию Павла Шеметова «Метаболический архитектор» и начните разбираться в биохимии самостоятельно.</p>
+            
+            <a href="get_book.html?utm_source=google&utm_medium=cpc&utm_campaign=promo_metabolic_reset_ru_v1&utm_content=popup_book" class="block text-center w-full py-4 bg-brand-600 hover:bg-brand-500 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(225,29,72,0.3)] transition-all">
+                📥 ЗАБРАТЬ БЕСПЛАТНУЮ КНИГУ
+            </a>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const popup = document.getElementById('book-popup');
+        const closePopup = document.getElementById('close-popup');
+        let popupShown = false;
+
+        const showPopup = () => {
+            if (!popupShown) {
+                popup.classList.add('active');
+                popupShown = true;
+            }
+        };
+
+        // 1. Для ПК: мышка уходит вверх
+        document.addEventListener("mouseleave", (e) => {
+            if (e.clientY < 0) showPopup();
+        });
+
+        // 2. Для мобильных: скролл вверх после середины страницы
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", () => {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll < lastScrollTop && currentScroll > 1500 && (lastScrollTop - currentScroll > 50)) {
+                    showPopup();
+                }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }, false);
+
+        // 3. Fallback: через 45 секунд
+        setTimeout(showPopup, 45000);
+
+        closePopup.addEventListener('click', () => {
+            popup.classList.remove('active');
+        });
+
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
