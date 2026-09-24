@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нутрициолог и коуч по образу жизни | Metabolic Clinic</title>
+    <meta name="description" content="Персональное наставничество и онлайн-консультации нутрициолога. Системные изменения веса и привычек от Metabolic Clinic.">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18444564771">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18444564771');
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            950: '#020617',
+                            900: '#0f172a',
+                            800: '#1e293b',
+                        },
+                        brand: {
+                            DEFAULT: '#e11d48',
+                            500: '#e11d48',
+                            600: '#be123c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Метаболический коуч и нутрициолог",
+      "jobTitle": "Коуч по здоровому образу жизни и нутрициолог",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Metabolic Clinic"
+      },
+      "description": "Персональное наставничество, онлайн-консультации и системные изменения веса и привычек."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Персональное наставничество нутрициолога",
+      "provider": {
+        "@type": "MedicalBusiness",
+        "name": "Metabolic Clinic"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "3000",
+        "priceCurrency": "UAH"
+      }
+    }
+    </script>
+</head>
+<body class="bg-dark-950 text-slate-300 antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-dark-950/80 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500 shadow-[0_0_15px_rgba(225,29,72,0.2)]">
+                    <i data-lucide="user-check" class="w-5 h-5"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-white font-extrabold tracking-tight text-lg">Metabolic Clinic</span>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Наставничество</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-white transition-colors">Коуч</a>
+                <a href="#formats" class="hover:text-white transition-colors">Форматы</a>
+                <a href="#pricing" class="hover:text-white transition-colors">Аудит</a>
+                <a href="#reviews" class="hover:text-white transition-colors">Отзывы</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="https://booking.metadoc.live" target="_blank" rel="noopener" class="relative group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-500 text-white font-semibold text-sm transition-all duration-300 hover:bg-brand-600 shadow-[0_0_25px_rgba(225,29,72,0.4)] hover:shadow-[0_0_35px_rgba(225,29,72,0.6)]">
+                    <span>Записаться</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-dvh flex items-center justify-center pt-28 pb-16 px-4 overflow-hidden">
+            <!-- Background glow -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+            
+            <div class="max-w-5xl mx-auto text-center relative z-10">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
+                    <i data-lucide="award" class="w-4 h-4 text-brand-500"></i>
+                    <span class="text-xs sm:text-sm font-medium text-slate-300">Персональное наставничество нутрициолога</span>
+                </div>
+
+                <!-- H1 -->
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 leading-[1.1]">
+                    Экспертное наставництво <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-rose-300">и поддержка нутрициолога</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Преодолейте плато веса и хаос в питании с помощью персонального коучинга. Системные изменения привычек под руководством специалиста.
+                </p>
+
+                <!-- CTA -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://booking.metadoc.live" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-500 text-white font-bold text-base transition-all duration-300 hover:bg-brand-600 shadow-[0_0_30px_rgba(225,29,72,0.5)] hover:shadow-[0_0_45px_rgba(225,29,72,0.8)]">
+                        <span>Начать работу с нутрициологом</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+                <!-- Trust indicators -->
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6 pt-10 border-t border-white/5 text-left max-w-3xl mx-auto">
+                    <div class="flex items-start gap-3">
+                        <div class="p-2 rounded-lg bg-white/5 text-brand-500 mt-1"><i data-lucide="check" class="w-4 h-4"></i></div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Кто такой коуч</div>
+                            <div class="text-xs text-slate-400">Проводник к вашей цели</div>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="p-2 rounded-lg bg-white/5 text-brand-500 mt-1"><i data-lucide="check" class="w-4 h-4"></i></div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Индивидуальный трекинг</div>
+                            <div class="text-xs text-slate-400">Постоянная поддержка и осмотр</div>
+                        </div>
+                    </div>
+                    <div class="col-span-2 md:col-span-1 flex items-start gap-3">
+                        <div class="p-2 rounded-lg bg-white/5 text-brand-500 mt-1"><i data-lucide="check" class="w-4 h-4"></i></div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Онлайн-формат</div>
+                            <div class="text-xs text-slate-400">Консультации из любой точки мира</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок преимуществ наставника / Кто такой метаболический коуч -->
+        <section id="about" class="py-24 bg-dark-900 border-t border-b border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+                        Почему самостоятельные попытки не работают, а <span class="text-brand-500">наставничество</span> дает результат
+                    </h2>
+                    <p class="text-slate-400">
+                        Когда вы пытаетесь изменить все сами, мешают слепые зоны и нехватка структуры. Коуч становится вашим навигатором.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl bg-dark-950 border border-white/5 hover:border-brand-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 mb-6">
+                            <i data-lucide="compass" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Кто такой метаболический коуч</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Это эксперт по здоровому образу жизни, который оцифровывает ваш опыт, выявляет привычки-разрушители и помогает выстроить новую систему питания без срывов.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-dark-950 border border-white/5 hover:border-brand-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 mb-6">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Преодоление плато веса</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Если вес замер вопреки всем усилиям, нутрициолог находит скрытые дефициты внимания к деталям в вашем режиме дня и корректирует вектор.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-dark-950 border border-white/5 hover:border-brand-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 mb-6">
+                            <i data-lucide="smile" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Комфортные привычки</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Никаких наказаний за съеденную конфету. Формируем устойчивые паттерны поведения, которые останутся с вами на всю жизнь и обеспечат легкость.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форматы онлайн-консультаций (Направления / Услуги) -->
+        <section id="formats" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+                        Форматы работы и наставничества
+                    </h2>
+                    <p class="text-slate-400">
+                        Выберите удобный формат взаимодействия для достижения ваших целей по здоровью и весу.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl bg-dark-900 border border-white/5 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="text-brand-500 font-bold text-xs uppercase tracking-wider mb-2">Старт</div>
+                            <h3 class="text-2xl font-extrabold text-white mb-4">Онлайн-консультация</h3>
+                            <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                                Точечный разбор вашего текущего состояния, анализ питания и ответы на главные вопросы по энергии.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-white font-bold">Индивидуально</span>
+                            <a href="https://booking.metadoc.live" target="_blank" rel="noopener" class="text-brand-500 hover:text-white font-semibold text-sm flex items-center gap-1">
+                                <span>Выбрать</span>
+                                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-dark-900 border border-brand-500/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative shadow-[0_0_30px_rgba(225,29,72,0.1)]">
+                        <div class="absolute -top-3 right-6 px-3 py-1 rounded-full bg-brand-500 text-white font-bold text-[10px] uppercase tracking-wider">
+                            Популярно
+                        </div>
+                        <div>
+                            <div class="text-brand-500 font-bold text-xs uppercase tracking-wider mb-2">Фундамент</div>
+                            <h3 class="text-2xl font-extrabold text-white mb-4">Метаболический аудит</h3>
+                            <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                                Глубокая оцифровка образа жизни, длительная сессия, вектор действий и подбор необходимых лабораторных анализов.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-white font-bold">3000 грн</span>
+                            <a href="https://booking.metadoc.live" target="_blank" rel="noopener" class="text-brand-500 hover:text-white font-semibold text-sm flex items-center gap-1">
+                                <span>Записаться</span>
+                                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-dark-900 border border-white/5 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="text-brand-500 font-bold text-xs uppercase tracking-wider mb-2">Сопровождение</div>
+                            <h3 class="text-2xl font-extrabold text-white mb-4">Индивидуальный трекинг</h3>
+                            <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                                Постоянное сопровождение нутрициологом, коррекция ежедневных привычек и контроль динамики результатов.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-white font-bold">Комплексно</span>
+                            <a href="https://booking.metadoc.live" target="_blank" rel="noopener" class="text-brand-500 hover:text-white font-semibold text-sm flex items-center gap-1">
+                                <span>Узнать</span>
+                                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Коммерческий блок "Продукт / Тариф" -->
+        <section id="pricing" class="py-24 bg-dark-900 border-t border-white/5 relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+                        С чего начать работу с наставником
+                    </h2>
+                    <p class="text-slate-400">
+                        Выберите главный продукт для старта вашей метаболической трансформации.
+                    </p>
+                </div>
+
+                <!-- Product Card -->
+                <div class="rounded-3xl bg-dark-950 border-2 border-brand-500/50 p-8 sm:p-12 relative shadow-[0_0_50px_rgba(225,29,72,0.15)]">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-500 text-white font-bold text-xs uppercase tracking-wider">
+                        Хит наставничества
+                    </div>
+
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+                        <div>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">Первичный метаболический аудит</h3>
+                            <p class="text-slate-400 text-sm sm:text-base">Глубокое погружение в вашу биохимию, привычки и историю под руководством нутрициолога.</p>
+                        </div>
+                        <div class="text-left md:text-right shrink-0">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-white">3000 грн</div>
+                            <div class="text-xs text-slate-400">одноразовая оплата</div>
+                        </div>
+                    </div>
+
+                    <div class="py-8 grid sm:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 rounded-full bg-brand-500/20 text-brand-500 mt-1"><i data-lucide="check" class="w-4 h-4"></i></div>
+                            <span class="text-sm text-slate-300">Длительная онлайн-сессия (знакомство и опрос)</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 rounded-full bg-brand-500/20 text-brand-500 mt-1"><i data-lucide="check" class="w-4 h-4"></i></div>
+                            <span class="text-sm text-slate-300">Первичный вектор действий и срочные корректировки</span>
+                        </div>
+                        <div class="flex items-start gap-3 sm:col-span-2">
+                            <div class="p-1 rounded-full bg-brand-500/20 text-brand-500 mt-1"><i data-lucide="check" class="w-4 h-4"></i></div>
+                            <span class="text-sm text-slate-300">Персональный список необходимых лабораторных анализов</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 text-center">
+                        <a href="https://booking.metadoc.live" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-brand-500 text-white font-bold text-lg transition-all duration-300 hover:bg-brand-600 shadow-[0_0_30px_rgba(225,29,72,0.4)] hover:shadow-[0_0_45px_rgba(225,29,72,0.7)]">
+                            <span>Начать работу с нутрициологом (3000 грн)</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайдер отзывов -->
+        <section id="reviews" class="py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex items-end justify-between">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
+                        Результаты и кейсы клиентов
+                    </h2>
+                    <p class="text-slate-400">Истории тех, кто прошел путь трансформации с наставником</p>
+                </div>
+                <div class="hidden sm:flex gap-2">
+                    <button onclick="document.getElementById('reviews-container').scrollBy({left: -400, behavior: 'smooth'})" class="p-3 rounded-xl bg-dark-900 border border-white/10 text-white hover:bg-white/5 transition-colors">
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="document.getElementById('reviews-container').scrollBy({left: 400, behavior: 'smooth'})" class="p-3 rounded-xl bg-dark-900 border border-white/10 text-white hover:bg-white/5 transition-colors">
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="reviews-container" class="flex gap-6 overflow-x-auto px-4 sm:px-8 lg:px-16 pb-6 snap-x snap-mandatory scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none]">
+                <div class="min-w-[320px] sm:min-w-[400px] p-8 rounded-3xl bg-dark-900 border border-white/5 snap-start flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            "Долго не могла сдвинуть вес с мертвой точки. Благодаря наставничеству разобралась с пищевыми привычками и наконец почувствовала легкость и энергию без изнурительных диет."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-brand-500/20 text-brand-500 font-bold flex items-center justify-center">ОМ</div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Ольга Мариненко</div>
+                            <div class="text-xs text-slate-400">Клиентка клиники</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[320px] sm:min-w-[400px] p-8 rounded-3xl bg-dark-900 border border-white/5 snap-start flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            "Консультация дала четкий вектор. Никаких лишних бадов, только системный подход ко сну, режиму и питанию. Очень благодарен за профессионализм."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-brand-500/20 text-brand-500 font-bold flex items-center justify-center">ПК</div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Павел Коваль</div>
+                            <div class="text-xs text-slate-400">Предприниматель</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[320px] sm:min-w-[400px] p-8 rounded-3xl bg-dark-900 border border-white/5 snap-start flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            "Лучшая поддержка на пути к здоровью. Наставник помогла структурировать день так, что ушла постоянная усталость и тяга к сладкому."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-brand-500/20 text-brand-500 font-bold flex items-center justify-center">ИТ</div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Ирина Ткаченко</div>
+                            <div class="text-xs text-slate-400">Маркетолог</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 border-t border-white/5 py-12 text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500">
+                        <i data-lucide="user-check" class="w-4 h-4"></i>
+                    </div>
+                    <span class="text-white font-extrabold tracking-tight text-base">Metabolic Clinic</span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="https://booking.metadoc.live" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition-colors">Записаться</a>
+                    <a href="https://metadoc.live" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition-colors">Главная</a>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="p-4 rounded-xl bg-dark-900 border border-white/5 text-slate-400 text-xs leading-relaxed">
+                <strong class="text-white block mb-1">Юридический дисклеймер:</strong>
+                Metabolic Clinic — это центр метаболической оптимизации образа жизни. Программы, разборы и стратегии, что мы предоставляем, имеют исключительно информационный и коучинговый характер. Услуги сервиса не являются медицинской помощью, не ставят диагнозы и не отменяют назначений вашего врача.
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-white/5">
+                <div>&copy; 2026 Metabolic Clinic. Все права защищены.</div>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-slate-400 transition-colors">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
